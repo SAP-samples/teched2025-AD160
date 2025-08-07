@@ -1,12 +1,12 @@
-# Session ID - Session Title
+# AD160 - Get Hands-On with Joule: Boost Your SAP Build Development with AI
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2025 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2025 session called AD160 - Get Hands-On with Joule: Boost Your SAP Build Development with AI.  
 
 ## Overview
 
-This session introduces attendees to...
+This session introduces attendees to
 
 ## Requirements
 
