@@ -31,9 +31,7 @@ In exercise 2 we will connect this app to a S4/HANA system.
     - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
 
   
-**OR** Link to the Tutorial Navigator for example...
-
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
+Start the exercises [here](exercises/ex0/).
 
 **IMPORTANT**
 
