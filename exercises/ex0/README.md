@@ -1,6 +1,6 @@
 # Exercise 0 - Introduction
 
-In this exercise, we will create...
+In this exercise, we will explain the concepts we are using in the exercise and set up our environment.
 
 ## Exercise 0.1 What is Agentic Coding?
 
@@ -24,7 +24,9 @@ CAP, FE, UI5
 
 ## Exercise 0.2 Install MCP server
 
-go to Github copilot and install
+Install Github Copilot?
+In Github Copilot install MCP server.
+In github Copilot add instructions.
 
 ## Summary
 
