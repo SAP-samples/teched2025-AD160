@@ -18,10 +18,12 @@ In a browser, preferably Google Chrome open the SAP Build Lobby https://lcaptech
 
 ## Exercises
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
+The exercise is divided in three parts. In the Getting Started section we will introduce you into the AI concepts we are using and are going to set these up. 
+In exercise 1 we will create an application to manage incidents. 
+In exercise 2 we will connect this app to a S4/HANA system.
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
+- [Exercise 1 - Create an Incident Management app with agentic AI](exercises/ex1/)
     - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
     - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
 - [Exercise 2 - Second Exercise Description](exercises/ex2/)
