@@ -4,15 +4,6 @@ In this exercise, we will explain the concepts we are using in the exercise and 
 
 ## Exercise 0.1 What is Agentic Coding?
 
-After completing these steps you will have created...
-
-1. Click here.
-<br>![](/exercises/ex2/images/02_01_0010.png)
-
-2.    Insert this line of code.
-```abap
-response->set_text( |Hello ABAP World! | ). 
-```
 
 
 
