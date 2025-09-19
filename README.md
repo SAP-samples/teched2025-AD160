@@ -6,11 +6,15 @@ This repository contains the material for the SAP TechEd 2025 session called AD1
 
 ## Overview
 
-This session introduces attendees to
+This session introduces attendees to AI Driven development. You will create a new lightweight incident management application on the SAP BTP using SAP Build Code. The application will be based on the Cloud Application Programming Model (CAP) in the backend and have an SAP Fiori Elements UI as frontend. The application will also have a connectivity from the SAP BTP to an SAP S/4HANA system. 
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are...
+The instructors will assign a user and a password to you.
+
+The user will be something along the line of lowcodeuser+0XXX@gmail.com where XXX is a unique number that is assigned to you. 
+
+In a browser, preferably Google Chrome open the SAP Build Lobby https://lcapteched.eu10.build.cloud.sap/lobby and log on with the user and the password.
 
 ## Exercises
 

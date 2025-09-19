@@ -1,26 +1,33 @@
-# Level 1 Heading
+# Exercise 0 - Introduction
 
-In this exercise, you will...
+In this exercise, we will create...
 
-## Level 2 Heading
+## Exercise 0.1 What is Agentic Coding?
 
-After completing these steps you will have....
+After completing these steps you will have created...
 
-1.	Click here.
-<br>![](/exercises/ex0/images/00_00_0010.png)
+1. Click here.
+<br>![](/exercises/ex2/images/02_01_0010.png)
 
-2.	Insert this code.
-``` abap
- DATA(params) = request->get_form_fields(  ).
- READ TABLE params REFERENCE INTO DATA(param) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
+2.    Insert this line of code.
+```abap
+response->set_text( |Hello ABAP World! | ). 
 ```
+
+
+
+## Exercise 0.2 What are MCP servers?
+
+Different MCP Server
+
+CAP, FE, UI5
+
+## Exercise 0.2 Install MCP server
+
+go to Github copilot and install
 
 ## Summary
 
-Now that you have ... 
-Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+You've now ...
+
+Continue to - [Exercise 3 - Excercise 3 ](../ex3/README.md)
