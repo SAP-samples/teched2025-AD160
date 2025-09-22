@@ -2,6 +2,8 @@
 
 # Creating an Incident Management Application with AI Agents in SAP Build Code
 
+We are using SAP Build Code, which provides a powerful, cloud-based development environment optimized specifically for the SAP ecosystem, which accelerates the creation of business applications and extensions. As a central entry point for the SAP Build portfolio we start in the SAP Build Lobby.
+
 1.    Go to the SAP Build Lobby https://lcapteched.eu10.build.cloud.sap/lobby  to create a new application.
 2.    Click the Create button to begin -> By clicking on *Create* you can choose between ,,Create’’ ,,Clone from Git’’ and ,,Add from Dev Space’’ -> Choose *Create*
 
@@ -10,7 +12,7 @@
 3. Next, choose *Build an Application* from the available options 
 4. Pick *SAP Build Code* to build your app 
 5. Select *Full-Stack Application* as development configuration for your scenario 
-6. Enter a project name, for example *maintenanceNotificationXXX*, where XXX is the number of your previously assigned user. (The number is added to the project name to make sure your project is different from the ones of other users of this tutorial in case you want to deploy the application to the SAP Business Technology Platform (BTP)).
+6. Enter a project name, for example *incidentmanagementXXX*, where XXX is the number of your previously assigned user. (The number is added to the project name to make sure your project is different from the ones of other users of this tutorial in case you want to deploy the application to the SAP Business Technology Platform (BTP)).
 7. Under ''Development Stack'', select *Node.js* 
 8. Click *create* to finalize the setup and start working on your application
 
@@ -18,20 +20,25 @@ A new project will be created. This will take a few minutes. When the process is
 
 ![Name](images/name.png) 
 
-9. Once your application is created, click on its name to open it. This will launch the business application studio.
+9. Once your application is created, click on its name to open it. This will launch the SAP Build Code.
 
     
 ### Create and explore a CAP Model
 
-At first, the project will be empty. Next step is to create a CAP (Cloud Application Programming) data model and a service for the notification. This can either be done manually or with the help of Joule, the digital assistant. 
+At first, the project will be empty. Next step is to create a CAP (Cloud Application Programming) data model and a service for the incidents. This can either be done manually or with the help of Joule, the digital assistant. 
 
 Ask Joule to create a new CAP application:
 
 1.    Open Joule by clicking its icon on the left side bar   (see below screenshot).
 
-2.    To create a maintenance application with 2 properties, copy and paste the following prompt in the input field: 
+2.    We want to start to create the incident management application. In the first step only the data model, service and sample data should be created. Copy and paste the following prompt in the input field: 
 
-/*cap-gen-app Create a maintenance notification app which contains a problem description and a number of the record, both should be strings.*
+/*create a CAP application for managing customer support incidents:
+                  •               Incidents are reported by Customers and contain details like title, urgency, status, and a conversation log (messages with timestamps and authors).
+                  •               Customers have personal/contact information and a list of their incidents and addresses.
+                  •               Addresses are related to Customers and store location details.
+                  •               Status and Urgency are code lists, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
+Create only the data model, sample data and service. *
 
 ![Joule](images/joule.png)
 
