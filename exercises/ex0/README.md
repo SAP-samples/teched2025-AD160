@@ -76,7 +76,7 @@ Allow the installation by selecting **Allow**
 
 ![allowInstall](images/allowInstall.jpg) 
 
-Provide the server ID **cap-mcap**
+Provide the server ID **cap-mcp**
 
 ![serverID](images/serverID.jpg) 
 
