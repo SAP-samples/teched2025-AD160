@@ -61,21 +61,27 @@ In Github Copilot install MCP server.
 Configure your MCP:
 ·         Open Copilot Chat from the chat icon at the top.
 ·         Go to “Configure Tools” and enter your MCP details:
+
 ![configureTools](images/configureTools.png) 
 
 Select the MCP server type **NPM Package**
+
 ![MCPtype](images/MCPtype.jpg) 
 
 Insert the NPM Package Name **@cap-js/mcp-server** 
+
 ![NPMpackage](images/NPMpackage.jpg) 
 
 Allow the installation by selecting **Allow**
+
 ![allowInstall](images/allowInstall.jpg) 
 
 Provide the server ID **cap-mcap**
+
 ![serverID](images/serverID.jpg) 
 
 Select **Workspace** as MCP sever install location.
+
 ![MCPLocation](images/MCPLocation.jpg) 
 
 
@@ -83,15 +89,19 @@ Select **Workspace** as MCP sever install location.
 We are now defining rules to help the LLM use the server correctly:
 
 On the top right side in the AI chat panel, open the seetings by clicking the gearwheel icon and select instructions.
+
 ![addInstruction](images/addInstruction.jpg) 
 
 Select new instructions file.
+
 ![newInstructionFile](images/newInstructionFile.jpg) 
 
 Select .github/instructions as instruction folder.
+
 ![instructionFolder](images/instructionFolder.jpg) 
 
 Name it **rules**.
+
 ![instructionName](images/instructionName.jpg) 
 
 Replace line 4 with the following text:
@@ -99,6 +109,7 @@ Replace line 4 with the following text:
 - You MUST search for CAP docs with cds-mcp EVERY TIME you create, modify CDS models or when using APIs or the `cds` CLI from CAP. Do NOT propose, suggest or make any changes without first checking it.
 
 Your file should look like this:
+
 ![instructionFile](images/instructionFile.jpg) 
 
 
