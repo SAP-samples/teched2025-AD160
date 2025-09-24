@@ -33,17 +33,16 @@ Ask Joule to create a new CAP application:
 
 2.    We want to start to create the incident management application. In the first step only the data model, service and sample data should be created. Copy and paste the following prompt in the input field: 
 
-/*create a CAP application for managing customer support incidents:
+```
+create a CAP application for managing customer support incidents:
 
-                  •               Incidents are reported by Customers and contain details like title, urgency, status, and a conversation log (messages with timestamps and authors).
+•               Incidents are reported by Customers and contain details like title, urgency, status, and a conversation log (messages with timestamps and authors).              
+•               Customers have personal/contact information and a list of their incidents and addresses.
+•               Addresses are related to Customers and store location details.
+•               Status and Urgency are code lists, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
+```
                   
-                  •               Customers have personal/contact information and a list of their incidents and addresses.
-                  
-                  •               Addresses are related to Customers and store location details.
-                  
-                  •               Status and Urgency are code lists, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
-                  
-Create only the data model, sample data and service. */
+Create only the data model, sample data and service.
 
 ![Joule](images/joule.png)
 
