@@ -40,11 +40,10 @@ create a CAP application for managing customer support incidents:
 •               Customers have personal/contact information and a list of their incidents and addresses.
 •               Addresses are related to Customers and store location details.
 •               Status and Urgency are code lists, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
+Create only the data model, sample data and service.
 ```
                   
-Create only the data model, sample data and service.
-
-![Joule](images/joule.png)
+**Insert Screenshot**
 
 3. Click send to submit the request 
 
