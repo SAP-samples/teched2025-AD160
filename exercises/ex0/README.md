@@ -2,7 +2,7 @@
 
 In this exercise, we will explain the concepts we are using in the exercise and set up our environment.
 
-## Exercise 0.1 What is Agentic Coding?
+## Exercise 0.1 Learning: What is Agentic Coding?
 
 Agentic coding is a software development approach in which autonomous AI agents plan, write, test, and optimize code independently according to high-level goals, minimizing the need for ongoing human direction. These agents can reason about requirements, break down tasks, collaborate, and iteratively improve solutions—essentially transforming the developer’s role from manual implementer to supervisor and goal-definer. 
 
@@ -17,12 +17,12 @@ Agentic coding represents a paradigm shift, optimizing for system-wide intellige
 
 
 
-## Exercise 0.2 What are MCP servers?
+## Exercise 0.2 Learning: What are MCP servers?
 
 The Model Context Protocol (MCP) is the "USB-C port for AI". It is an open standard designed to create a universal connection between AI models, and external data sources, tools, and systems. It aims to replace the fragmented system of custom integrations with a single, standardized protocol, making it easier for AI to access and interact with the information it needs to provide more relevant and capable responses.
 
 ## How does it work
-MCP operates on a client-server architecture, which simplifies communication between AI applications and external systems.
+MCP operates on a client-server architecture, which simplifies communication between AI applications and external systems:
  - Host Application: This is the AI application, such as an LLM chat interface or an AI-enhanced code editor, that interacts with the user and initiates connections.
  - MCP Client: Integrated within the host application, the client translates the host’s needs into the MCP standard and manages the connection to MCP servers.
  - MCP Server: This is a service that exposes a specific data source or tool (like a GitHub repository, a database, or the SAP Tools) to the AI system through the MCP standard.
@@ -35,7 +35,7 @@ MCP allows developers to build more powerful and integrated AI systems by provid
  - Initiate Prompts: Use pre-defined message templates and workflows to guide user interactions.
  - Handle Security: The protocol includes principles for user consent, data privacy, and tool safety, though implementation is the responsibility of the developers.
 
-## Exercise 0.3 Which MCP servers does SAP provide?
+## Which MCP servers does SAP provide?
 
 SAP is committed to meeting developers where they’re at – that means no matter where or how you code, you have the freedom to choose the environment that best suits your needs and access to the tools that maximize your productivity and impact.
 
@@ -88,7 +88,8 @@ Select **Workspace** as MCP sever install location.
 
 
 ## Exercise 0.3 Add instructions to the AI agents
-We are now defining rules to help the LLM use the server correctly:
+To ensure that the AI produces correct results, we propose rules that guide the LLM’s behavior. For example for in the CAP MCP server, we define that the mcp server is always used when it searches for CDS definitions.
+We are now defining rules to help the LLM use the server correctly. In Github Copilot these rules are called instructions:
 
 On the top right side in the AI chat panel, open the seetings by clicking the gearwheel icon and select instructions.
 
