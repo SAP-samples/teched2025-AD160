@@ -23,17 +23,17 @@ The Model Context Protocol (MCP) is the "USB-C port for AI". It is an open stand
 
 ## How does it work
 MCP operates on a client-server architecture, which simplifies communication between AI applications and external systems.
-	•	Host Application: This is the AI application, such as an LLM chat interface or an AI-enhanced code editor, that interacts with the user and initiates connections.
-	•	MCP Client: Integrated within the host application, the client translates the host’s needs into the MCP standard and manages the connection to MCP servers.
-	•	MCP Server: This is a service that exposes a specific data source or tool (like a GitHub repository, a database, or the SAP Tools) to the AI system through the MCP standard.
+ - Host Application: This is the AI application, such as an LLM chat interface or an AI-enhanced code editor, that interacts with the user and initiates connections.
+ - MCP Client: Integrated within the host application, the client translates the host’s needs into the MCP standard and manages the connection to MCP servers.
+ - MCP Server: This is a service that exposes a specific data source or tool (like a GitHub repository, a database, or the SAP Tools) to the AI system through the MCP standard.
 
 
 ## Key Features and Capabilities
 MCP allows developers to build more powerful and integrated AI systems by providing a standard way for them to:
-	•	Share Resources: Provide contextual information and data from external systems to the AI model.
-	•	Expose Tools: Enable the AI model to execute functions and interact with external applications, such as running code or accessing APIs.
-	•	Initiate Prompts: Use pre-defined message templates and workflows to guide user interactions.
-	•	Handle Security: The protocol includes principles for user consent, data privacy, and tool safety, though implementation is the responsibility of the developers.
+ - Share Resources: Provide contextual information and data from external systems to the AI model.
+ - Expose Tools: Enable the AI model to execute functions and interact with external applications, such as running code or accessing APIs.
+ - Initiate Prompts: Use pre-defined message templates and workflows to guide user interactions.
+ - Handle Security: The protocol includes principles for user consent, data privacy, and tool safety, though implementation is the responsibility of the developers.
 
 ## Exercise 0.3 Which MCP servers does SAP provide?
 
