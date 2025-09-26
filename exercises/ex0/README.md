@@ -54,6 +54,8 @@ Value of SAP MCP Tools:
 - Guided Development: Developers receive recommendations and guardrails tailored to SAP Business Technology Platform (BTP).
 - Consistency:  SAP’s MCP tools are and will be reused across our tooling portfolio, ensuring consistent developer experience and outcomes wherever you build SAP applications. Whether you’re generating backend services, UIs, or business logic, you can rely on the same quality, structure, and compliance.
 
+If you want to get more information after the workshop, click here: [SAP MCP server](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-build-introduces-new-mcp-servers-to-enable-agentic-development-for/ba-p/14205602)
+
 ## Exercise 0.3 Install MCP server
 
 Install Github Copilot?
@@ -111,6 +113,13 @@ Replace line 4 with the following text:
 Your file should look like this:
 
 ![instructionFile](images/instructionFile.jpg) 
+
+
+Now we have completed the setup for CAP, but we also want to have a specialized agent for SAP Fiori Elements.
+Try to add the fiori-mcp-server in the same way like the cap mcp server.
+You can find the necessary details here: https://www.npmjs.com/package/@sap-ux/fiori-mcp-server
+If you want to learn more  after the workshop, have a look here [SAP Fiori Elements MCP server](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-fiori-tools-update-first-release-of-the-sap-fiori-mcp-server-for/ba-p/14204694)
+
 
 
 ## Summary
