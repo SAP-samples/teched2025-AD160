@@ -25,6 +25,9 @@ A new project will be created. This will take a few minutes. When the process is
     
 ### Create and explore a CAP Model
 
+**Aditional allinoneprompt**
+ Application Details: Application will be used to manage incidents. Each incident will have priority and status to indicate importance of it. Incident can also be updated with comments to indicate progress. afterwards generate the UI. I don't want to deploy it to sap hana, for now only want to test it locally.
+
 At first, the project will be empty. Next step is to create a CAP (Cloud Application Programming) data model and a service for the incidents. This can either be done manually or with the help of Joule, the digital assistant. 
 
 Ask Joule to create a new CAP application:
