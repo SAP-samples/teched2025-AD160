@@ -43,10 +43,113 @@ create a CAP application for managing customer support incidents:
 •               Customers have personal/contact information and a list of their incidents and addresses.
 •               Addresses are related to Customers and store location details.
 •               Status and Urgency are code lists, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
-Create only the data model, sample data and service.
+Create only the data model, sample data and service. use cds-mcp.
 ```
                   
 **Insert Screenshot**
+
+What will happen now:
+It is recognized that the CAP MCP should be used, which will use the search_docs tool to get the latest CAP documentation to execute your prompt.
+Sometimes to need to approve that.
+
+Now you should get an proposed Data Model Architecture, which could look like this:
+## Proposed Data Model Architecture
+
+### Core Entities:
+
+1. __Incidents__ - Main entity for support tickets
+
+   - ID (UUID, primary key)
+   - title (String)
+   - description (String, longer text)
+   - status (Association to Status code list)
+   - urgency (Association to Urgency code list)
+   - customer (Association to Customers)
+   - conversation (Composition of many Messages)
+   - Created/modified timestamps (using managed aspect)
+
+2. __Customers__ - Customer information
+
+   - ID (UUID, primary key)
+   - firstName, lastName (String)
+   - email (String)
+   - phone (String)
+   - incidents (Association to many Incidents)
+   - addresses (Composition of many Addresses)
+   - Created/modified timestamps (using managed aspect)
+
+3. __Addresses__ - Customer address information
+
+   - ID (UUID, primary key)
+   - customer (Association to Customers)
+   - street, city, postalCode, country (String fields)
+   - addressType (String) - e.g., "billing", "shipping", "primary"
+   - Created/modified timestamps (using managed aspect)
+
+4. __Messages__ - Conversation log for incidents
+
+   - ID (UUID, primary key)
+   - incident (Association to Incidents)
+   - author (String) - could be customer name or support agent
+   - content (String)
+   - timestamp (DateTime)
+   - isInternal (Boolean) - to distinguish internal notes from customer-visible messages
+
+5. __Status__ - Code list for incident status
+
+   - code (String, primary key) - "new", "assigned", "in_progress", "resolved", "closed"
+   - name (localized String)
+
+6. __Urgency__ - Code list for urgency levels
+
+   - code (String, primary key) - "low", "medium", "high", "critical"
+   - name (localized String)
+
+
+As a next step an implementatio Plan should be displayed.
+- __Initialize CAP Project__
+- __Create Data Model__ (db/schema.cds)
+- __Create Service Definition__ (srv/incidents-service.cds)
+- __Generate Sample Data__
+
+You can now modify or accept the proposal and the agent will generate the necessary files.
+If you navigate now to your project, your file strcture should contain these files:
+![Files](images/files.jpg) 
+
+
+Open the terminal **cds watch** to start a preview of the service.:
+```
+cds watch
+```
+
+Click on **http://localhost:4004** to open the preview
+
+Now select **Fiori Preview** for the incidents
+![Incidents preview](images/preview.jpg)
+
+Add columns to see the content, therefore select the gearwheel in the middle of the UI and select all Columns afterwards.
+![Select Columns](images/columns.jpg)
+
+You will see now all the sample data.
+![Sample data](images/previewsample.jpg)
+
+Go back to the development environment.
+Now let's add some SAP Fiori Elements UI on top.
+
+```
+use the fiori-mcp to add UIs to the application
+```
+
+First it will call the list_functionality tool. Second it will call the get_functionality_details.
+Probably the cds-mcap is used for the search_model tool
+
+
+
+
+
+Logic extension:
+If an incident is closed, it cannot be modify anymore.
+If the title of an incidents includes urgent, set the urgency to high.
 
 3. Click send to submit the request 
 
