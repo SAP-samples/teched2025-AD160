@@ -146,14 +146,36 @@ What is the difference beween these relationships?
 
 Find more information here: https://cap.cloud.sap/docs/cds/cdl#associations
 
-Open the terminal **cds watch** to start a preview of the service.:
+**1.2.3 Understand the Service**
+In the srv folder a cds file was generated that contains all the services of your application, probably called incidents-service.cds.
+Currently that file should only contain simple projections on the entities.
+
+![service](images/service.jpg) 
+
+**1.2.4 Add some logic to the service with the AI Agent**
+We want to extend the application with some backend logic. We will use the AI agent again for that.
+Please execute the following prompt:
+
+```
+If an incident is closed, it cannot be modify anymore.
+If the title of an incidents includes urgent, set the urgency to high.
+```
+
+Now a new file should be created in your srv folder called incidents-service.js.
+
+![Incidents Service](images/incidents_service.jpg)
+
+As you can see the AI agents included the logic we have requested and also two comments explaining where the logic was implemented.
+
+**1.2.5 Preview the application**
+Open the terminal **cds watch** to start a preview of the service:
 ```
 cds watch
 ```
 
 Click on **http://localhost:4004** to open the preview
 
-Now select **Fiori Preview** for the incidents
+Now select **Fiori Preview** for the incidents.
 ![Incidents preview](images/preview.jpg)
 
 Add columns to see the content, therefore select the gearwheel in the middle of the UI and select all Columns afterwards.
@@ -163,23 +185,26 @@ You will see now all the sample data.
 ![Sample data](images/previewsample.jpg)
 
 Go back to the development environment.
-Now let's add some SAP Fiori Elements UI on top.
+
+
+
+### 1.2 Create SAP Fiori Elements UIs
+Now let's add some SAP Fiori Elements UI on top. Therefore we will use our AI agents again. This time the SAP Fiori MCP server will be used by the agent.
+Please execute the following prompt:
 
 ```
-use the fiori-mcp to add UIs to the application
+Create a Fiori elements list report on top for the incidents, customers.
+add additional Fiori Elements pages for customer, addresses, incidentmessages, status and urgency. Add the incidentsmessages to the details of the incidents
 ```
 
 First it will call the list_functionality tool. Second it will call the get_functionality_details.
 Probably the cds-mcap is used for the search_model tool
 
-Create a Fiori elements list report on top for the risks.
-add additional Fiori Elements pages for customer, address, incidentmessages, status and urgency. Add the incidentsmessages to the details of the incidents
 
 
 
-Logic extension:
-If an incident is closed, it cannot be modify anymore.
-If the title of an incidents includes urgent, set the urgency to high.
+
+
 
 3. Click send to submit the request 
 
