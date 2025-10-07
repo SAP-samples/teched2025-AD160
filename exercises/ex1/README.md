@@ -25,12 +25,12 @@ A new project will be created. This will take a few minutes. When the process is
     
 ### 1.2 Create and explore a CAP Model
 
-**Aditional allinoneprompt**
+**Aditional allinoneprompt DELETE IF NOT NEEDED**
  Application Details: Application will be used to manage incidents. Each incident will have priority and status to indicate importance of it. Incident can also be updated with comments to indicate progress. afterwards generate the UI. I don't want to deploy it to sap hana, for now only want to test it locally.
 
 At first, the project will be empty. Next step is to create a CAP (Cloud Application Programming) data model and a service for the incidents. This can either be done manually or with the help of Joule, the digital assistant. 
 
-1.2.1 Create a new CAP application with Joule:
+**1.2.1 Create a new CAP application with Joule:**
 
 1.    Open Joule by clicking its icon on the left side bar   (see below screenshot).
 
@@ -119,7 +119,7 @@ If you navigate now to your project, your file strcture should contain these fil
 
 ![Files](images/files.jpg) 
 
-1.2.2 Understand the Schema
+**1.2.2 Understand the Schema**
 
 Your schema should contain now entities for incidents, customers, adresses and messages. Let's have a closer look what was implemented by the AI agent.
 In the db folder, you will find the **schema.cds** file. This file contains the data model.
