@@ -114,6 +114,7 @@ As a next step an implementatio Plan should be displayed.
 
 You can now modify or accept the proposal and the agent will generate the necessary files.
 If you navigate now to your project, your file strcture should contain these files:
+
 ![Files](images/files.jpg) 
 
 
