@@ -105,8 +105,10 @@ Now you should get an proposed Data Model Architecture, which could look like th
    - code (String, primary key) - "low", "medium", "high", "critical"
    - name (localized String)
 
+Urgeny and Status will be modeled as Enum types. If you want to find more about the, have  look at the capire documentation: https://cap.cloud.sap/docs/cds/cdl#enums
 
-As a next step an implementatio Plan should be displayed.
+
+As a next step an implementation Plan should be displayed.
 - __Initialize CAP Project__
 - __Create Data Model__ (db/schema.cds)
 - __Create Service Definition__ (srv/incidents-service.cds)
