@@ -131,6 +131,20 @@ __cuid is a shortcut for unique primary keys__
 __managed captues created by/at and latest modified by/at management information for records__
 Find more information here: https://cap.cloud.sap/docs/cds/common#aspect-cuid
 
+What you will also see in your schema that relationships between entities are created. There are two ways. Associations and Compositions.
+
+![association](images/association.jpg) 
+
+What is the difference beween these relationships?
+| Feature | Composition | Association |
+| :--- | :--- | :--- |
+| **Relationship Type** | A strict "part-of" or ownership relationship, modeling a parent-child structure. | A looser "uses-a" or peer-to-peer relationship between independent entities. |
+| **Lifecycle** | The child entity's lifecycle is dependent on the parent. If the parent is deleted, the child is also deleted (cascaded delete). | The connected entities have independent lifecycles. Deleting one does not affect the other. |
+| **Example** | A `SalesOrder` and its `Items`. The items cannot exist without the sales order header. | A `SalesOrder` and a `Customer`. The customer can exist independently of any single sales order. |
+
+
+Find more information here: https://cap.cloud.sap/docs/cds/cdl#associations
+
 Open the terminal **cds watch** to start a preview of the service.:
 ```
 cds watch
