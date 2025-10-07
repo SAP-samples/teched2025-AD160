@@ -43,7 +43,7 @@ create a CAP application for managing customer support incidents:
 •               Customers have personal/contact information and a list of their incidents and addresses.
 •               Addresses are related to Customers and store location details.
 •               Status and Urgency are code lists, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
-Create only the data model, sample data and service. use cds-mcp.
+Create only the data model, sample data and service. use cds-mcp. use cds init incients to create the project.
 ```
                   
 **Insert Screenshot**
@@ -143,7 +143,8 @@ use the fiori-mcp to add UIs to the application
 First it will call the list_functionality tool. Second it will call the get_functionality_details.
 Probably the cds-mcap is used for the search_model tool
 
-
+Create a Fiori elements list report on top for the risks.
+add additional Fiori Elements pages for customer, address, incidentmessages, status and urgency. Add the incidentsmessages to the details of the incidents
 
 
 
