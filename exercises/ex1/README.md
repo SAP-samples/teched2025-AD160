@@ -127,8 +127,9 @@ In the beginning it includes some aspects from the common library. For example c
 
 ![Common](images/common.jpg) 
 
-__cuid is a shortcut for unique primary keys__
-__managed captues created by/at and latest modified by/at management information for records__
+**cuid** is a shortcut for unique primary keys
+
+**managed** captues created by/at and latest modified by/at management information for records
 Find more information here: https://cap.cloud.sap/docs/cds/common#aspect-cuid
 
 What you will also see in your schema that relationships between entities are created. There are two ways. Associations and Compositions.
