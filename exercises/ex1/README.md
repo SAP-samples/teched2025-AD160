@@ -53,9 +53,9 @@ It is recognized that the CAP MCP should be used, which will use the search_docs
 Sometimes to need to approve that.
 
 Now you should get an proposed Data Model Architecture, which could look like this:
-## Proposed Data Model Architecture
+### Proposed Data Model Architecture
 
-### Core Entities:
+**Core Entities**:
 
 1. __Incidents__ - Main entity for support tickets
 
