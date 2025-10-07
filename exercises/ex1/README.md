@@ -1,6 +1,6 @@
 # Exercise 1 - Exercise 1 Description
 
-# Creating an Incident Management Application with AI Agents in SAP Build Code
+# 1.1 Creating an Incident Management Application with AI Agents in SAP Build Code
 
 We are using SAP Build Code, which provides a powerful, cloud-based development environment optimized specifically for the SAP ecosystem, which accelerates the creation of business applications and extensions. As a central entry point for the SAP Build portfolio we start in the SAP Build Lobby.
 
@@ -23,14 +23,14 @@ A new project will be created. This will take a few minutes. When the process is
 9. Once your application is created, click on its name to open it. This will launch the SAP Build Code.
 
     
-### Create and explore a CAP Model
+### 1.2 Create and explore a CAP Model
 
 **Aditional allinoneprompt**
  Application Details: Application will be used to manage incidents. Each incident will have priority and status to indicate importance of it. Incident can also be updated with comments to indicate progress. afterwards generate the UI. I don't want to deploy it to sap hana, for now only want to test it locally.
 
 At first, the project will be empty. Next step is to create a CAP (Cloud Application Programming) data model and a service for the incidents. This can either be done manually or with the help of Joule, the digital assistant. 
 
-Ask Joule to create a new CAP application:
+1.2.1 Create a new CAP application with Joule:
 
 1.    Open Joule by clicking its icon on the left side bar   (see below screenshot).
 
@@ -119,6 +119,17 @@ If you navigate now to your project, your file strcture should contain these fil
 
 ![Files](images/files.jpg) 
 
+1.2.2 Understand the Schema
+
+Your schema should contain now entities for incidents, customers, adresses and messages. Let's have a closer look what was implemented by the AI agent.
+In the db folder, you will find the **schema.cds** file. This file contains the data model.
+In the beginning it includes some aspects from the common library. For example cuid and managed can be added.
+
+![Common](images/common.jpg) 
+
+__cuid is a shortcut for unique primary keys__
+__managed captues created by/at and latest modified by/at management information for records__
+Find more information here: https://cap.cloud.sap/docs/cds/common#aspect-cuid
 
 Open the terminal **cds watch** to start a preview of the service.:
 ```
