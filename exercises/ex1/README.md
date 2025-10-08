@@ -48,7 +48,7 @@ update the CAP application for managing customer support incidents. use the mcp 
 
 •               Incidents are directly related to BusinessPartners and contain details like title, urgency, status, and a conversation log (messages with timestamps and authors).              
 •               Extend API_BUSINESS_PARTNER. Expose only BusinessPartner with READ.
-•               Status and Urgency are code lists, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
+•               Status and Urgency are enum types, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
 
 ```
 
@@ -101,7 +101,7 @@ Now you should get an proposed Data Model Architecture, which could look like th
 
 __1. Data Model (db/schema.cds):__
 
-- `Status` and `Urgency`: Code list entities (UUID keys, code, description), to enumerate incident states and urgency levels. Values like new/assigned/closed and high/medium/low.
+- `Status` and `Urgency`: Enum entities (UUID keys, code, description), to enumerate incident states and urgency levels. Values like new/assigned/closed and high/medium/low.
 - `Incident` entity: (UUID key) Contains title, status, urgency associations, and association to BusinessPartner.
 - `ConversationMessage`: Entity for conversation log, with a UUID key, message, author, createdAt (timestamp), and association to `Incident`.
 - Association to API_BUSINESS_PARTNER.cds: Incidents link to BusinessPartner using the string(10) key from the external service.
