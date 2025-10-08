@@ -22,8 +22,35 @@ A new project will be created. This will take a few minutes. When the process is
 
 9. Once your application is created, click on its name to open it. This will launch the SAP Build Code.
 
-    
+   
 ### 1.2 Create and explore a CAP Model
+
+improvements: run cds init in the beginning manually
+download odata.edmx from business partner api: https://api.sap.com/api/API_BUSINESS_PARTNER/overview
+copy&paste the file in the folder
+cds import API_BUSINESS_PARTNER.edmx --as cds
+show it in external service
+
+backup 
+```Extend API_BUSINESS_PARTNER.
+Create service.cds and service.js.
+Expose only BusinessPartner with READ and CREATE. If the name contains “banana”, throw an error.
+```
+
+We have a destination defined in our SAP BTP acoount with already access to the S4HC and exposed the business partner scenario. I would like to test locally by using this destination and my new project. Let’s then correct and add new information with my prompt.
+
+```I would like you check the package.json and prepare the project for deploy and test locally. I have a BTP destination ready and connected with name API_BUSINESS_PARTNER_CC7
+```
+
+**Necessary? Need to be checked**
+Step 5 — Prep for local testing with a Destination
+The BTP Destination named API_BUSINESS_PARTNER_CC7 that points to the S/4HANA Business Partner API.
+
+Add the MTA file and the destination configuration (to connect to the system). **Should we do that with AI?**
+
+```
+cds add mta;cds add xsuaa,destination,connectivity;
+```
 
 **Aditional allinoneprompt DELETE IF NOT NEEDED**
  Application Details: Application will be used to manage incidents. Each incident will have priority and status to indicate importance of it. Incident can also be updated with comments to indicate progress. afterwards generate the UI. I don't want to deploy it to sap hana, for now only want to test it locally.
