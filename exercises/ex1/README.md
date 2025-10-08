@@ -25,16 +25,31 @@ A new project will be created. This will take a few minutes. When the process is
    
 ### 1.2 Create and explore a CAP Model
 
-improvements: run cds init in the beginning manually
-download odata.edmx from business partner api: https://api.sap.com/api/API_BUSINESS_PARTNER/overview
-copy&paste the file in the folder
-cds import API_BUSINESS_PARTNER.edmx --as cds
-show it in external service
+improvements: 
 
-backup 
-```Extend API_BUSINESS_PARTNER.
-Create service.cds and service.js.
-Expose only BusinessPartner with READ and CREATE. If the name contains “banana”, throw an error.
+Open the Terminal and run **cds init** in the beginning manually. It initializes a new project in folder ./<project>, with the current working directory as default.
+
+Open the business partner API: https://api.sap.com/api/API_BUSINESS_PARTNER/overview
+
+Click on **API Specification** and download odata.edmx. 
+
+copy&paste the file in the folder. Afterwards run the following command in the Terminal:
+
+```
+cds import API_BUSINESS_PARTNER.edmx --as cds
+```
+
+Now the Business Partner is added as external service. Your project should look like this:
+
+![Business Partner](images/businesspartner.jpg) 
+
+```
+update the CAP application for managing customer support incidents. use the mcp server cds-mcp. Create only the data model(schema.cds), sample data and service:
+
+•               Incidents are directly related to BusinessPartners and contain details like title, urgency, status, and a conversation log (messages with timestamps and authors).              
+•               Extend API_BUSINESS_PARTNER. Expose only BusinessPartner with READ.
+•               Status and Urgency are code lists, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
+
 ```
 
 We have a destination defined in our SAP BTP acoount with already access to the S4HC and exposed the business partner scenario. I would like to test locally by using this destination and my new project. Let’s then correct and add new information with my prompt.
@@ -84,53 +99,13 @@ Now you should get an proposed Data Model Architecture, which could look like th
 
 **Core Entities**:
 
-1. __Incidents__ - Main entity for support tickets
+__1. Data Model (db/schema.cds):__
 
-   - ID (UUID, primary key)
-   - title (String)
-   - description (String, longer text)
-   - status (Association to Status code list)
-   - urgency (Association to Urgency code list)
-   - customer (Association to Customers)
-   - conversation (Composition of many Messages)
-   - Created/modified timestamps (using managed aspect)
+- `Status` and `Urgency`: Code list entities (UUID keys, code, description), to enumerate incident states and urgency levels. Values like new/assigned/closed and high/medium/low.
+- `Incident` entity: (UUID key) Contains title, status, urgency associations, and association to BusinessPartner.
+- `ConversationMessage`: Entity for conversation log, with a UUID key, message, author, createdAt (timestamp), and association to `Incident`.
+- Association to API_BUSINESS_PARTNER.cds: Incidents link to BusinessPartner using the string(10) key from the external service.
 
-2. __Customers__ - Customer information
-
-   - ID (UUID, primary key)
-   - firstName, lastName (String)
-   - email (String)
-   - phone (String)
-   - incidents (Association to many Incidents)
-   - addresses (Composition of many Addresses)
-   - Created/modified timestamps (using managed aspect)
-
-3. __Addresses__ - Customer address information
-
-   - ID (UUID, primary key)
-   - customer (Association to Customers)
-   - street, city, postalCode, country (String fields)
-   - addressType (String) - e.g., "billing", "shipping", "primary"
-   - Created/modified timestamps (using managed aspect)
-
-4. __Messages__ - Conversation log for incidents
-
-   - ID (UUID, primary key)
-   - incident (Association to Incidents)
-   - author (String) - could be customer name or support agent
-   - content (String)
-   - timestamp (DateTime)
-   - isInternal (Boolean) - to distinguish internal notes from customer-visible messages
-
-5. __Status__ - Code list for incident status
-
-   - code (String, primary key) - "new", "assigned", "in_progress", "resolved", "closed"
-   - name (localized String)
-
-6. __Urgency__ - Code list for urgency levels
-
-   - code (String, primary key) - "low", "medium", "high", "critical"
-   - name (localized String)
 
 Urgeny and Status will be modeled as Enum types. If you want to find more about the, have  look at the capire documentation: https://cap.cloud.sap/docs/cds/cdl#enums
 
