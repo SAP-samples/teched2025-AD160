@@ -25,7 +25,12 @@ A new project will be created. This will take a few minutes. When the process is
    
 ### 1.2 Create and explore a CAP Model
 
-improvements: 
+**Aditional allinoneprompt DELETE IF NOT NEEDED**
+ Application Details: Application will be used to manage incidents. Each incident will have priority and status to indicate importance of it. Incident can also be updated with comments to indicate progress. afterwards generate the UI. I don't want to deploy it to sap hana, for now only want to test it locally.
+
+At first, the project will be empty. Next step is to create a CAP (Cloud Application Programming) data model and a service for the incidents. This can either be done manually or with the help of Joule, the digital assistant. 
+
+**1.2.0 Project preparation**
 
 Open the Terminal and run **cds init** in the beginning manually. It initializes a new project in folder ./<project>, with the current working directory as default.
 
@@ -43,8 +48,16 @@ Now the Business Partner is added as external service. Your project should look 
 
 ![Business Partner](images/businesspartner.jpg) 
 
+
+**1.2.1 Create a new CAP application with Joule:**
+
+1.    Open Joule by clicking its icon on the left side bar   (see below screenshot).
+
+2.    We want to start to create the incident management application. In the first step only the data model, service should be created. Copy and paste the following prompt in the input field: 
+
+
 ```
-update the CAP application for managing customer support incidents. use the mcp server cds-mcp. Create only the data model(schema.cds), sample data and service:
+update the CAP application for managing customer support incidents. use the mcp server cds-mcp. Create only the data model(schema.cds) and service:
 
 •               Incidents are directly related to BusinessPartners and contain details like title, urgency, status, and a conversation log (messages with timestamps and authors).              
 •               Extend API_BUSINESS_PARTNER. Expose only BusinessPartner with READ.
@@ -52,6 +65,8 @@ update the CAP application for managing customer support incidents. use the mcp 
 
 ```
 
+
+**Necessary? Need to be checked**
 We have a destination defined in our SAP BTP acoount with already access to the S4HC and exposed the business partner scenario. I would like to test locally by using this destination and my new project. Let’s then correct and add new information with my prompt.
 
 ```I would like you check the package.json and prepare the project for deploy and test locally. I have a BTP destination ready and connected with name API_BUSINESS_PARTNER_CC7
@@ -67,17 +82,8 @@ Add the MTA file and the destination configuration (to connect to the system). *
 cds add mta;cds add xsuaa,destination,connectivity;
 ```
 
-**Aditional allinoneprompt DELETE IF NOT NEEDED**
- Application Details: Application will be used to manage incidents. Each incident will have priority and status to indicate importance of it. Incident can also be updated with comments to indicate progress. afterwards generate the UI. I don't want to deploy it to sap hana, for now only want to test it locally.
 
-At first, the project will be empty. Next step is to create a CAP (Cloud Application Programming) data model and a service for the incidents. This can either be done manually or with the help of Joule, the digital assistant. 
-
-**1.2.1 Create a new CAP application with Joule:**
-
-1.    Open Joule by clicking its icon on the left side bar   (see below screenshot).
-
-2.    We want to start to create the incident management application. In the first step only the data model, service and sample data should be created. Copy and paste the following prompt in the input field: 
-
+**old remove**
 ```
 create a CAP application for managing customer support incidents:
 
@@ -111,10 +117,8 @@ Urgeny and Status will be modeled as Enum types. If you want to find more about 
 
 
 As a next step an implementation Plan should be displayed.
-- __Initialize CAP Project__
 - __Create Data Model__ (db/schema.cds)
 - __Create Service Definition__ (srv/incidents-service.cds)
-- __Generate Sample Data__
 
 You can now modify or accept the proposal and the agent will generate the necessary files.
 If you navigate now to your project, your file strcture should contain these files:
@@ -123,7 +127,7 @@ If you navigate now to your project, your file strcture should contain these fil
 
 **1.2.2 Understand the Schema**
 
-Your schema should contain now entities for incidents, customers, adresses and messages. Let's have a closer look what was implemented by the AI agent.
+Your schema should contain now entities for incidents, customers and messages. Let's have a closer look what was implemented by the AI agent.
 In the db folder, you will find the **schema.cds** file. This file contains the data model.
 In the beginning it includes some aspects from the common library. For example cuid and managed can be added.
 
@@ -154,7 +158,17 @@ Currently that file should only contain simple projections on the entities.
 
 ![service](images/service.jpg) 
 
-**1.2.4 Add some logic to the service with the AI Agent**
+
+**1.2.4 Add sample data**
+
+
+Now let's generate some test data.
+```
+Add some meaningful test data to the application
+```
+
+
+**1.2.5 Add some logic to the service with the AI Agent**
 We want to extend the application with some backend logic. We will use the AI agent again for that.
 Please execute the following prompt:
 
@@ -195,8 +209,7 @@ Now let's add some SAP Fiori Elements UI on top. Therefore we will use our AI ag
 Please execute the following prompt:
 
 ```
-Create a Fiori elements list report on top for the incidents, customers.
-add additional Fiori Elements pages for customer, addresses, incidentmessages, status and urgency. Add the incidentsmessages to the details of the incidents
+Create a Fiori elements list report on top for the incidents. Add the incidentsmessages to the details of the incidents.
 ```
 
 First it will call the list_functionality tool. Second it will call the get_functionality_details.
