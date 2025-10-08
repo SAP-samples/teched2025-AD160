@@ -126,3 +126,47 @@ If you want to learn more  after the workshop, have a look here [SAP Fiori Eleme
 ## Summary
 
 You've now learnt what Agentic AI and MCP is and we setup our development environment. Let's jump into the first part of the exercise [Exercise 1 - Create a CAP application ](../ex1/README.md)
+
+
+
+optional BAS Cline config
+{
+  "mcpServers": {
+    "cds-mcp": {
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/home/user/.node_modules_global/lib/node_modules/@cap-js/mcp-server/index.js"
+      ],
+      "env": {
+        "PATH": "/home/user/.asdf/bin:"
+      }
+    },
+    "fiori-mcp": {
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/home/user/.node_modules_global/lib/node_modules/@sap-ux/fiori-mcp-server/dist/index.js"
+      ],
+      "env": {
+        "PATH": "/home/user/.asdf/bin:"
+      }
+    },
+    "ui5-mcp": {
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/home/user/.node_modules_global/lib/node_modules/@ui5/mcp-server/bin/ui5mcp.js"
+      ],
+      "env": {
+        "PATH": "/home/user/.asdf/bin:"
+      }
+    }
+  }
+}
