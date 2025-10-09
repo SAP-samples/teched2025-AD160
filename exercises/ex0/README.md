@@ -128,6 +128,7 @@ If you want to learn more  after the workshop, have a look here [SAP Fiori Eleme
 You've now learnt what Agentic AI and MCP is and we setup our development environment. Let's jump into the first part of the exercise [Exercise 1 - Create a CAP application ](../ex1/README.md)
 
 
+BAS agents.md location /home/user/agents.md
 
 optional BAS Cline config
 {
