@@ -56,118 +56,42 @@ Value of SAP MCP Tools:
 
 If you want to get more information after the workshop, click here: [SAP MCP server](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-build-introduces-new-mcp-servers-to-enable-agentic-development-for/ba-p/14205602)
 
-## Exercise 0.3 Install MCP server
 
-Install Github Copilot?
-In Github Copilot install MCP server.
-Configure your MCP:
-·         Open Copilot Chat from the chat icon at the top.
-·         Go to “Configure Tools” and enter your MCP details:
 
-![configureTools](images/configureTools.png) 
+## Exercise 0.3 Installation of an AI Agent
 
-Select the MCP server type **NPM Package**
+In this exercise we will use Cline, an Autonomous coding agent, which can be added to your IDE. If you want to find out more information about Cline, click here [Cline Github](https://github.com/cline/cline)
 
-![MCPtype](images/MCPtype.jpg) 
-
-Insert the NPM Package Name **@cap-js/mcp-server** 
-
-![NPMpackage](images/NPMpackage.jpg) 
-
-Allow the installation by selecting **Allow**
-
-![allowInstall](images/allowInstall.jpg) 
-
-Provide the server ID **cap-mcp**
-
-![serverID](images/serverID.jpg) 
-
-Select **Workspace** as MCP sever install location.
-
-![MCPLocation](images/MCPLocation.jpg) 
+To save some time in this hands-on, we already set up Cline with an SAP AI Core integration in SAP Build Code. If you want to set it up after this hands-on on your maschine, you will find the documentation here: [Cline + SAP AI Core](https://architecture.learning.sap.com/docs/ref-arch/e5eb3b9b1d/10)
 
 
 ## Exercise 0.3 Add instructions to the AI agents
 To ensure that the AI produces correct results, we propose rules that guide the LLM’s behavior. For example for in the CAP MCP server, we define that the mcp server is always used when it searches for CDS definitions.
-We are now defining rules to help the LLM use the server correctly. In Github Copilot these rules are called instructions:
+We are now defining rules to help the LLM use the server correctly. It is a combination of rules for CAP and Fiori Elements and store in an agents.md file in your dev space. We already have done that for you. The file is store in location /home/user/agents.md
 
-On the top right side in the AI chat panel, open the seetings by clicking the gearwheel icon and select instructions.
 
-![addInstruction](images/addInstruction.jpg) 
+```
+## Guidelines for CAP
 
-Select new instructions file.
-
-![newInstructionFile](images/newInstructionFile.jpg) 
-
-Select .github/instructions as instruction folder.
-
-![instructionFolder](images/instructionFolder.jpg) 
-
-Name it **rules**.
-
-![instructionName](images/instructionName.jpg) 
-
-Replace line 4 with the following text:
 - You MUST search for CDS definitions, like entities, fields and services (which include HTTP endpoints) with cds-mcp, only if it fails you MAY read \*.cds files in the project.
 - You MUST search for CAP docs with cds-mcp EVERY TIME you create, modify CDS models or when using APIs or the `cds` CLI from CAP. Do NOT propose, suggest or make any changes without first checking it.
 
-Your file should look like this:
+## Rules for creation or modification of SAP Fiori elements apps
 
-![instructionFile](images/instructionFile.jpg) 
-
-
-Now we have completed the setup for CAP, but we also want to have a specialized agent for SAP Fiori Elements.
-Try to add the fiori-mcp-server in the same way like the cap mcp server.
-You can find the necessary details here: https://www.npmjs.com/package/@sap-ux/fiori-mcp-server
-If you want to learn more  after the workshop, have a look here [SAP Fiori Elements MCP server](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-fiori-tools-update-first-release-of-the-sap-fiori-mcp-server-for/ba-p/14204694)
-
-
+- When asked to create an SAP Fiori elements app check whether the user input can be interpreted as an application organized into one or more pages containing table data or forms, these can be translated into a SAP Fiori elements application, else ask the user for suitable input.
+- The application typically starts with a List Report page showing the data of the base entity of the application in a table. Details of a specific table row are shown in the ObjectPage. This first Object Page is therefore based on the base entity of the application.
+- An Object Page can contain one or more table sections based on to-many associations of its entity type. The details of a table section row can be shown in an another Object Page based on the associations target entity.
+- The data model must be suitable for usage in a SAP Fiori elements frontend application. So there must be one main entity and one or more navigation properties to related entities.
+- Each property of an entity must have a proper datatype.
+- For all entities in the data model provide primary keys of type UUID.
+- When creating sample data in CSV files, all primary keys and foreign keys MUST be in UUID format (e.g., `550e8400-e29b-41d4-a716-446655440001`).
+- When generating or modifying the SAP Fiori elements application on top of the CAP service use the Fiori MCP server if available.
+- When attempting to modify the SAP Fiori elements application like adding columns you must not use the screen personalization but instead modify the code of the project, before this first check whether an MCP server provides a suitable function.
+- When previewing the SAP Fiori elements application use the most specific script for the app in the `package.json`.
+```
 
 ## Summary
 
 You've now learnt what Agentic AI and MCP is and we setup our development environment. Let's jump into the first part of the exercise [Exercise 1 - Create a CAP application ](../ex1/README.md)
 
 
-BAS agents.md location /home/user/agents.md
-
-optional BAS Cline config
-{
-  "mcpServers": {
-    "cds-mcp": {
-      "disabled": false,
-      "timeout": 60,
-      "type": "stdio",
-      "command": "node",
-      "args": [
-        "/home/user/.node_modules_global/lib/node_modules/@cap-js/mcp-server/index.js"
-      ],
-      "env": {
-        "PATH": "/home/user/.asdf/bin:"
-      }
-    },
-    "fiori-mcp": {
-      "disabled": false,
-      "timeout": 60,
-      "type": "stdio",
-      "command": "node",
-      "args": [
-        "/home/user/.node_modules_global/lib/node_modules/@sap-ux/fiori-mcp-server/dist/index.js"
-      ],
-      "env": {
-        "PATH": "/home/user/.asdf/bin:"
-      }
-    },
-    "ui5-mcp": {
-      "disabled": false,
-      "timeout": 60,
-      "type": "stdio",
-      "command": "node",
-      "args": [
-        "/home/user/.node_modules_global/lib/node_modules/@ui5/mcp-server/bin/ui5mcp.js"
-      ],
-      "env": {
-        "PATH": "/home/user/.asdf/bin:"
-      }
-    }
-  }
-}
