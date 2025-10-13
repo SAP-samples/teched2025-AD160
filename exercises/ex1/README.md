@@ -25,33 +25,29 @@ A new project will be created. This will take a few minutes. When the process is
    
 ### 1.2 Create and explore a CAP Model
 
-**Aditional allinoneprompt DELETE IF NOT NEEDED**
- Application Details: Application will be used to manage incidents. Each incident will have priority and status to indicate importance of it. Incident can also be updated with comments to indicate progress. afterwards generate the UI. I don't want to deploy it to sap hana, for now only want to test it locally.
+**1.2.0 Add S4/HANA external service:**
 
-At first, the project will be empty. Next step is to create a CAP (Cloud Application Programming) data model and a service for the incidents. This can either be done manually or with the help of Joule, the digital assistant. 
+1.    Click on the **+** in the external resources on the Storyboard.
 
-**1.2.0 Project preparation**
+![external Resource](images/externalResource.jpg) 
 
-Open the Terminal and run **cds init** in the beginning manually. It initializes a new project in folder ./<project>, with the current working directory as default.
+**1.2.1 Create a new CAP application with Agentic AI:**
 
-Open the business partner API: https://api.sap.com/api/API_BUSINESS_PARTNER/overview
+1.    Open Cline by clicking its icon on the left side bar   (see below screenshot).
 
-Click on **API Specification** and download odata.edmx. 
+![Cline](images/openCline.jpg) 
 
-copy&paste the file in the folder. Afterwards run the following command in the Terminal:
+2.    We need to add the AI Core credentials.Therefore click on the llm at the bottom of Cline.
 
-```
-cds import API_BUSINESS_PARTNER.edmx --as cds
-```
+![LLM](images/llm.jpg) 
 
-Now the Business Partner is added as external service. Your project should look like this:
+3.    Now we have to enter the AI Core client ID and secret.
 
-![Business Partner](images/businesspartner.jpg) 
+![AICore](images/AICore.jpg) 
 
+4.    Now we can go back, by clicking on the llm at the button again.
 
-**1.2.1 Create a new CAP application with Joule:**
-
-1.    Open Joule by clicking its icon on the left side bar   (see below screenshot).
+![Cline back](images/llmback.jpg) 
 
 2.    We want to start to create the incident management application. In the first step only the data model, service should be created. Copy and paste the following prompt in the input field: 
 
@@ -66,33 +62,7 @@ update the CAP application for managing customer support incidents. use the mcp 
 ```
 
 
-**Necessary? Need to be checked**
-We have a destination defined in our SAP BTP acoount with already access to the S4HC and exposed the business partner scenario. I would like to test locally by using this destination and my new project. Let’s then correct and add new information with my prompt.
 
-```I would like you check the package.json and prepare the project for deploy and test locally. I have a BTP destination ready and connected with name API_BUSINESS_PARTNER_CC7
-```
-
-**Necessary? Need to be checked**
-Step 5 — Prep for local testing with a Destination
-The BTP Destination named API_BUSINESS_PARTNER_CC7 that points to the S/4HANA Business Partner API.
-
-Add the MTA file and the destination configuration (to connect to the system). **Should we do that with AI?**
-
-```
-cds add mta;cds add xsuaa,destination,connectivity;
-```
-
-
-**old remove**
-```
-create a CAP application for managing customer support incidents:
-
-•               Incidents are reported by Customers and contain details like title, urgency, status, and a conversation log (messages with timestamps and authors).              
-•               Customers have personal/contact information and a list of their incidents and addresses.
-•               Addresses are related to Customers and store location details.
-•               Status and Urgency are code lists, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
-Create only the data model, sample data and service. use cds-mcp. use cds init incients to create the project.
-```
                   
 **Insert Screenshot**
 
