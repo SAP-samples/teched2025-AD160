@@ -33,13 +33,26 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
 ![external Resource](images/externalResource.jpg) 
 
-2.    Select the service API_BUSINESS_PARTNER.
+2.    You are directed into the Service Center, showing those APIs the administrator has set up for you via the SAP Systems choice. BTP offers multiple ways to explore available APIs. The selected SAP System one provides the APIs that were added as BTP destinations for APIs or API catalogues. 
 
-![external Resource](images/externalResource.jpg) 
+      Another option is SAP Business Accelerator Hub, which shows all the publicly available APIs from all SAP products, that you can also find directly in the SAP Business Accelerator Hub (https://api.sap.com/)
 
-You can click on **Live Data** to check the data. Afterwards you can just click on **Add to Project**.
+      A third option is the Developer Hub, see here, where administrators can carefully curate and govern which APIs are published to developers and to manage these APIs by securing, applying transformation or traffic management options. The last option is the Unfied Customer Landscape, which shows all the APIs that are part of a customer’s SAP and Third Party landscape.
+      Take some time to explore these other options separately.
+
+      Turn to the preselected **SAP System** choice. Select the service API_BUSINESS_PARTNER.
+
+![Business Partner API](images/businesspartnerAPI.jpg) 
+
+3.    Explore its entities and respective details on the right. You can also press on the Live Data tab on the details view. As the SAP System APIs are connected to real backed systems, you can see some of the API’s data from this system. You can click on **Live Data** to check the data. Afterwards you can just click on **Add to Project**.
 
 ![add to Project](images/addtoproject.jpg) 
+
+4.    You will find the S/4 system now part of your project.
+
+![Storyboard Overview](images/storyboardexternal.jpg) 
+
+
 
 **1.2.1 Create a new CAP application with Agentic AI:**
 
