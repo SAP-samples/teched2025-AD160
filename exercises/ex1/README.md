@@ -25,11 +25,21 @@ A new project will be created. This will take a few minutes. When the process is
    
 ### 1.2 Create and explore a CAP Model
 
+In our application we want to use the Business Partner data from our S4/HANA system. Therefore we add the connection to S/4 as a first step.
+
 **1.2.0 Add S4/HANA external service:**
 
 1.    Click on the **+** in the external resources on the Storyboard.
 
 ![external Resource](images/externalResource.jpg) 
+
+2.    Select the service API_BUSINESS_PARTNER.
+
+![external Resource](images/externalResource.jpg) 
+
+You can click on **Live Data** to check the data. Afterwards you can just click on **Add to Project**.
+
+![add to Project](images/addtoproject.jpg) 
 
 **1.2.1 Create a new CAP application with Agentic AI:**
 
