@@ -292,6 +292,12 @@ Each Incidents should also be able to have several attachments. Use the installe
 
 What happened here? The Attachments plugin has been added to the file. As a last step, a new property needs to be created, called *attachments* here, which is a *Composition of Attachments.*
 
+Your new schema.cds file should contain now these two line:
+
+![schemaattachments](images/schemaattachments.jpg) 
+
+
+
 Let’s have a look at the result:
 
 8. If you have stopped the preview, press the green arrow on the upper right of the Storyboard again. If the preview is still running, the application should have refreshed itself.
