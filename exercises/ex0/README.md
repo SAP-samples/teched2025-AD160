@@ -64,6 +64,49 @@ In this exercise we will use Cline, an Autonomous coding agent, which can be add
 
 To save some time in this hands-on, we already set up Cline with an SAP AI Core integration in SAP Build Code. If you want to set it up after this hands-on on your maschine, you will find the documentation here: [Cline + SAP AI Core](https://architecture.learning.sap.com/docs/ref-arch/e5eb3b9b1d/10)
 
+<details>
+<summary><b>BAS Cline MCP config</b></summary>
+{
+  "mcpServers": {
+    "cds-mcp": {
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/home/user/.node_modules_global/lib/node_modules/@cap-js/mcp-server/index.js"
+      ],
+      "env": {
+        "PATH": "/home/user/.asdf/bin:"
+      }
+    },
+    "fiori-mcp": {
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/home/user/.node_modules_global/lib/node_modules/@sap-ux/fiori-mcp-server/dist/index.js"
+      ],
+      "env": {
+        "PATH": "/home/user/.asdf/bin:"
+      }
+    },
+    "ui5-mcp": {
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/home/user/.node_modules_global/lib/node_modules/@ui5/mcp-server/bin/ui5mcp.js"
+      ],
+      "env": {
+        "PATH": "/home/user/.asdf/bin:"
+      }
+    }
+  }
+}
+</details>
 
 ## Exercise 0.3 Add instructions to the AI agents
 To ensure that the AI produces correct results, we propose rules that guide the LLM’s behavior. For example for in the CAP MCP server, we define that the mcp server is always used when it searches for CDS definitions.

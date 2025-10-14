@@ -87,7 +87,6 @@ update the CAP application for managing customer support incidents. use the mcp 
 
 
                   
-**Insert Screenshot**
 
 What will happen now:
 It is recognized that the CAP MCP should be used, which will use the search_docs tool to get the latest CAP documentation to execute your prompt.
@@ -106,17 +105,19 @@ __1. Data Model (db/schema.cds):__
 - Association to API_BUSINESS_PARTNER.cds: Incidents link to BusinessPartner using the string(10) key from the external service.
 
 
-Urgeny and Status will be modeled as Enum types. If you want to find more about the, have  look at the capire documentation: https://cap.cloud.sap/docs/cds/cdl#enums
-
 
 As a next step an implementation Plan should be displayed.
 - __Create Data Model__ (db/schema.cds)
 - __Create Service Definition__ (srv/incidents-service.cds)
 
 You can now modify or accept the proposal and the agent will generate the necessary files.
-If you navigate now to your project, your file strcture should contain these files:
+
+We don't need any further modification, therefore switch to act plan and accept the proposal.
+
+If you navigate now to your file explorer by clicking the **explorer** icon on the right side, your file structure should contain these files:
 
 ![Files](images/files.jpg) 
+
 
 **1.2.2 Understand the Schema**
 
@@ -126,10 +127,15 @@ In the beginning it includes some aspects from the common library. For example c
 
 ![Common](images/common.jpg) 
 
-**cuid** is a shortcut for unique primary keys
+   **cuid** is a shortcut for unique primary keys
 
-**managed** captues created by/at and latest modified by/at management information for records
+   **managed** captues created by/at and latest modified by/at management information for records
 Find more information here: https://cap.cloud.sap/docs/cds/common#aspect-cuid
+
+
+Urgeny and Status will be modeled as Enum types. If you want to find more about the, have  look at the capire documentation: https://cap.cloud.sap/docs/cds/cdl#enums
+
+
 
 What you will also see in your schema that relationships between entities are created. There are two ways. Associations and Compositions.
 
@@ -145,7 +151,9 @@ What is the difference beween these relationships?
 
 Find more information here: https://cap.cloud.sap/docs/cds/cdl#associations
 
+
 **1.2.3 Understand the Service**
+
 In the srv folder a cds file was generated that contains all the services of your application, probably called incidents-service.cds.
 Currently that file should only contain simple projections on the entities.
 
@@ -154,11 +162,19 @@ Currently that file should only contain simple projections on the entities.
 
 **1.2.4 Add sample data**
 
+Please check if you already have some sample data in your project. You can find these in folder db/data or test/data.
+When you use cds watch or cds deploy, CSV files are loaded by default from test/data. However, when preparing for production deployments using cds build, CSV files from test/data are not loaded.
 
-Now let's generate some test data.
+
+![Sample Data](images/sampledata.jpg) 
+
+
+That means if your don't have a folder **test/data** with sample data, go back to Cline and let's generate some test data.
+
 ```
-Add some meaningful test data to the application
+Add some meaningful test data to the application for incidents and conversation logs.
 ```
+
 
 
 **1.2.5 Add some logic to the service with the AI Agent**
