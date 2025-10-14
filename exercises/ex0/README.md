@@ -72,6 +72,8 @@ This Documentation will also work with SAP Build Code. To open the extensions cl
 </details>
 <details>
 <summary><b>BAS Cline MCP config</b></summary>
+
+```
 {
   "mcpServers": {
     "cds-mcp": {
@@ -112,6 +114,8 @@ This Documentation will also work with SAP Build Code. To open the extensions cl
     }
   }
 }
+```
+
 </details>
 
 ## Exercise 0.3 Add instructions to the AI agents
