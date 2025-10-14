@@ -62,8 +62,14 @@ If you want to get more information after the workshop, click here: [SAP MCP ser
 
 In this exercise we will use Cline, an Autonomous coding agent, which can be added to your IDE. If you want to find out more information about Cline, click here [Cline Github](https://github.com/cline/cline)
 
-To save some time in this hands-on, we already set up Cline with an SAP AI Core integration in SAP Build Code. If you want to set it up after this hands-on on your maschine, you will find the documentation here: [Cline + SAP AI Core](https://architecture.learning.sap.com/docs/ref-arch/e5eb3b9b1d/10)
+To save some time in this hands-on, we already set up Cline with an SAP AI Core integration in SAP Build Code. 
 
+<details>
+<summary><b>Manual installation of Cline</b></summary>
+If you want to set it up after this hands-on on your maschine, you will find the documentation here: [Cline + SAP AI Core](https://architecture.learning.sap.com/docs/ref-arch/e5eb3b9b1d/10)
+
+This Documentation will also work with SAP Build Code. To open the extensions click on the menu icon, select View -> Extensions.
+</details>
 <details>
 <summary><b>BAS Cline MCP config</b></summary>
 {
