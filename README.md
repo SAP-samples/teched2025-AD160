@@ -21,9 +21,9 @@ In a browser, preferably Google Chrome open the SAP Build Lobby https://lcaptech
 
 ## Exercises
 
-The exercise is divided in three parts. In the Getting Started section we will introduce you into the AI concepts we are using and are going to set these up. 
-In exercise 1 we will create an application to manage incidents. 
-In exercise 2 we will connect this app to a S4/HANA system.
+The exercise is divided in two parts. In the Getting Started section we will introduce you into the AI concepts we are using and are going to set these up. 
+In exercise 1 we will connect to the S/4 system and create an application to manage incidents. 
+
 
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Create an Incident Management app with agentic AI](exercises/ex1/)
