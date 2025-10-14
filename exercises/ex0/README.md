@@ -143,6 +143,18 @@ We are now defining rules to help the LLM use the server correctly. It is a comb
 - When previewing the SAP Fiori elements application use the most specific script for the app in the `package.json`.
 ```
 
+<details>
+<summary><b>Manual installation, if you are at home</b></summary>
+
+Open Cline and click on the rules icon.
+
+![Cline Rules](images/clinerules.jpg)
+
+Press the **+** icon next to the Global rules. Provide any name like **SAP** and press enter. Afterwards add the rules mentioned above into the file.
+
+
+</details>
+
 ## Summary
 
 You've now learnt what Agentic AI and MCP is and we setup our development environment. Let's jump into the first part of the exercise [Exercise 1 - Create a CAP application ](../ex1/README.md)
