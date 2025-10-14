@@ -1,6 +1,6 @@
 # Exercise 1 - Exercise 1 Description
 
-# 1.1 Creating an Incident Management Application with AI Agents in SAP Build Code
+### 1.1 Creating an Incident Management Application with AI Agents in SAP Build Code
 
 We are using SAP Build Code, which provides a powerful, cloud-based development environment optimized specifically for the SAP ecosystem, which accelerates the creation of business applications and extensions. As a central entry point for the SAP Build portfolio we start in the SAP Build Lobby.
 
@@ -84,9 +84,6 @@ update the CAP application for managing customer support incidents. use the mcp 
 
 ```
 
-
-
-                  
 
 What will happen now:
 It is recognized that the CAP MCP should be used, which will use the search_docs tool to get the latest CAP documentation to execute your prompt.
@@ -195,31 +192,35 @@ Now a new file should be created in your srv folder called incidents-service.js.
 
 As you can see the AI agents included the logic we have requested and also two comments explaining where the logic was implemented.
 
-**1.2.5 Preview the application**
-Open the terminal **cds watch** to start a preview of the service:
+**1.2.6 Preview the application**
+
+1. Open the terminal **cds watch** to start a preview of the service:
 ```
 cds watch
 ```
 
-Click on **http://localhost:4004** to open the preview
+2. Click on **http://localhost:4004** to open the preview
 
-Now select **Fiori Preview** for the incidents.
+3. Now select **Fiori Preview** for the incidents.
 
 ![Incidents preview](images/preview.jpg)
 
-Add columns to see the content, therefore select the gearwheel in the middle of the UI and select all Columns afterwards.
+4. Add columns to see the content, therefore select the gearwheel in the middle of the UI and select all Columns afterwards.
 
 ![Select Columns](images/columns.jpg)
 
-You will see now all the sample data.
+5. You will see now all the sample data.
 
 ![Sample data](images/previewsample.jpg)
 
-Go back to the development environment.
+6. Go back to the development environment.
 
 
 
-### 1.3 Create SAP Fiori Elements UIs
+### 1.3 Use AI Agents to add UIs to the application
+
+### 1.3.1 Create a SAP Fiori Elemts UI
+
 Now let's add some SAP Fiori Elements UI on top. Therefore we will use our AI agents again. This time the SAP Fiori MCP server will be used by the agent.
 Please execute the following prompt:
 
@@ -241,7 +242,7 @@ The UIs generated should look like this. Press the **go** button to display the 
 
 ![Details](images/details.jpg)
 
-### 1.3.1 Adjust the UI Application
+### 1.3.2 Adjust the UI Application
 
 We want to adjust the overview page a bit, that we can easier identity urgent incidents. Use the AI Agents again with the following prompt:
 
@@ -256,12 +257,19 @@ The new UI should look like this:
 ![Overview with criticality](images/criticality.jpg)
 
 
+### 1.3.3 Use the S/4 Business Partner
+
+```
+if a new incident is created the businesspartner should be selected from the external S/4 system as value help. Use sample data for that.
+```
+
+
 
 This completes the first part of the tutorial.
 
 
 
-### Add attachments to the application 
+### 1.4 Add attachments to the application 
 
 In this part of the tutorial, another feature of the CAP framework will be added to the application: With each incident, the user should have an option to add an attachment, for example, a photo the problem description. For this, addition logic and an additional UI section is needed to maintain and show attachments for each notification. 
 
@@ -290,7 +298,7 @@ This will add a so-called *CAP plugin*, in this case one for attachment-handling
 Each Incidents should also be able to have several attachments. Use the installed plugin for that. Only update the schema.
 ```
 
-What happened here? The Attachments plugin has been added to the file. As a last step, a new property needs to be created, called *attachments* here, which is a *Composition of Attachments.*
+7. What happened here? The Attachments plugin has been added to the file. As a last step, a new property needs to be created, called *attachments* here, which is a *Composition of Attachments.*
 
 Your new schema.cds file should contain now these two line:
 
