@@ -180,17 +180,20 @@ Please check if you already have some sample data in your project. You can find 
 ![Sample Data](images/sampledata.jpg) 
 
 
-That means if your don't have a folder **test/data** with sample data, go back to Cline and let's generate some sample data.
+That means if you don't have a folder **test/data** with sample data, go back to Cline and let's generate some sample data.
 
 ```
-Add some meaningful sample data to the application for incidents and conversation logs. If you already have sample data in db/data move them to test/data
+Add some meaningful sample data to the application for incidents and conversation logs. If you already have sample data in db/data move them to test/data. Don't run a preview.
 ```
 
-
+Accept the proposal and file generation from the AI Agent. Afterwards verify that you have csv files in the test/data folder.
 
 **1.2.5 Add some logic to the service with the AI Agent**
 
-We want to extend the application with some backend logic. We will use the AI agent again for that.
+We want to extend the application with some backend logic. If the title of an incidents contains th word urgent, the backend should automatically update the urgency field to high. In addition if an incident is already closed, it cannot be modified anymore.
+
+We will use the AI agent again for that again.
+
 Please execute the following prompt:
 
 ```
