@@ -35,6 +35,8 @@ In exercise 1 we will connect to the S/4 system and create an application to man
        1.3 Use AI Agents to add UIs to the application
 
        1.4 Add attachments to the application 
+
+- [Exercise 2 - Optional Part: Add attachments to the application ](exercises/ex2/)
   
 Start the exercises [here](exercises/ex0/).
 
