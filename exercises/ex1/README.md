@@ -296,11 +296,12 @@ Go back to the preview and create a new incident. You should see a value help no
 
 ![Value Help](images/valuehelp.jpg)
 
-This completes the first part of the tutorial.
+
+**This completes the first part of the tutorial. Well Done!**
 
 
 
-### 1.4 Add attachments to the application 
+### 1.4 Optional exercise: Add attachments to the application 
 
 In this part of the tutorial, another feature of the CAP framework will be added to the application: With each incident, the user should have an option to add an attachment, for example, a photo the problem description. For this, addition logic and an additional UI section is needed to maintain and show attachments for each notification. 
 
