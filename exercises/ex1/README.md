@@ -1,4 +1,4 @@
-# Exercise 1 - Exercise 1 Description
+# Exercise 1 - Create an Incident Management app with agentic AI
 
 ### 1.1 Creating an Incident Management Application with AI Agents in SAP Build Code
 
