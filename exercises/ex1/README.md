@@ -75,7 +75,7 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
 ![Cline back](images/llmback.jpg) 
 
-2.    We want to start to create the incident management application. In the first step only the data model, service should be created. Copy and paste the following prompt in the input field: 
+5.    We want to start to create the incident management application. In the first step only the data model, service should be created. Copy and paste the following prompt in the input field: 
 
 
 ```
@@ -90,7 +90,8 @@ update the CAP application for managing customer support incidents. use the mcp 
 
 What will happen now:
 It is recognized that the CAP MCP should be used, which will use the search_docs tool to get the latest CAP documentation to execute your prompt.
-Sometimes to need to approve that.
+
+*hint* Sometimes to need to approve some steps. You have to do that.
 
 Now you should get an proposed Data Model Architecture, which could look like this:
 ### Proposed Data Model Architecture
@@ -106,15 +107,15 @@ __1. Data Model (db/schema.cds):__
 
 
 
-As a next step an implementation Plan should be displayed.
+6. As a next step an implementation Plan should be displayed.
 - __Create Data Model__ (db/schema.cds)
 - __Create Service Definition__ (srv/incidents-service.cds)
 
 You can now modify or accept the proposal and the agent will generate the necessary files.
 
-We don't need any further modification, therefore switch to act plan and accept the proposal.
+7. We don't need any further modification, therefore switch to act plan and accept the proposal.
 
-If you navigate now to your file explorer by clicking the **explorer** icon on the right side, your file structure should contain these files:
+8. If you navigate now to your file explorer by clicking the **explorer** icon on the right side, your file structure should contain these files:
 
 ![Files](images/files.jpg) 
 
