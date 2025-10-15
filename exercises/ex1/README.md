@@ -199,6 +199,7 @@ Please execute the following prompt:
 ```
 If an incident is closed, it cannot be modify anymore.
 If the title of an incidents includes urgent, set the urgency to high.
+Don't run a preview after generation of the logic.
 ```
 
 Now a new file should be created in your srv folder called incidents-service.js.
