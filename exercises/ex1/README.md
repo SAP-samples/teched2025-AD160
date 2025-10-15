@@ -71,11 +71,12 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
 ![AICore](images/AICore.jpg) 
 
-4.    Now we can go back, by clicking on the llm at the button again.
+4.    Now we can go back, by clicking on the LLM name at the button again.
 
 ![Cline back](images/llmback.jpg) 
 
-5.    We want to start to create the incident management application. In the first step only the data model, service should be created. Copy and paste the following prompt in the input field: 
+5.    We want to start to create the incident management application. In the first step only the data model, service should be created. As we are building a SAP Fiori Elements UI at the end on top of the backend, we want to have the service draft enabled.
+6.Copy and paste the following prompt in the input field: 
 
 
 ```
@@ -210,12 +211,19 @@ As you can see the AI agents included the logic we have requested and also two c
 
 **1.2.6 Preview the application**
 
-1. Open the terminal **cds watch** to start a preview of the service:
+Let's have a look how the application is looking like at the moment.
+1.    Open a new terminal by pressing the hamburger icon on the left side pane
+2.    Select *Terminal*
+3.    Select *New terminal*
+
+![Terminal](images/terminal.png)
+
+4. enter **cds watch** and press enter to start a preview of the service:
 ```
 cds watch
 ```
 
-2. Click on **http://localhost:4004** to open the preview
+2. Click on **http://localhost:4004** in the terminal to open the preview
 
 3. Now select **Fiori Preview** for the incidents.
 
