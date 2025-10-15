@@ -99,7 +99,7 @@ Now you should get an proposed Data Model Architecture, which could look like th
 
 **Core Entities**:
 
-__1. Data Model (db/schema.cds):__
+*Data Model (db/schema.cds):*
 
 - `Status` and `Urgency`: Enum entities (UUID keys, code, description), to enumerate incident states and urgency levels. Values like new/assigned/closed and high/medium/low.
 - `Incident` entity: (UUID key) Contains title, status, urgency associations, and association to BusinessPartner.
@@ -229,7 +229,7 @@ cds watch
 
 ![Incidents preview](images/preview.jpg)
 
-4. Add columns to see the content, therefore select the gearwheel in the middle of the UI and select all Columns afterwards.
+4. If no columns are displayed, you can simply add them to see the content. Therefore select the gearwheel in the middle of the UI and select all Columns afterwards.
 
 ![Select Columns](images/columns.jpg)
 
@@ -260,7 +260,14 @@ Probably the cds-mcap is used for the search_model tool.
 
 You need to approve the usage of these MCP servers by clicking **approve**.
 
-The UIs generated should look like this. Press the **go** button to display the values.
+If the preview is not running anymore, run **cds watch** again in the terminal. Open the preview URL http://localhost:4004 and open the index.html.
+
+if you get an error running cds watch try to execute the following before:
+pkill -f "cds serve" || pkill -f "cds watch" || pkill -f "npm run"
+
+![Index](images/index.jpg)
+
+The UIs generated should look like this. 
 
 ![Overview](images/overview.jpg)
 

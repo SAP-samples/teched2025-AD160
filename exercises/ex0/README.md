@@ -68,7 +68,7 @@ To save some time in this hands-on, we already set up Cline with an SAP AI Core 
 <summary><b>Manual installation of Cline</b></summary>
 If you want to set it up after this hands-on on your maschine, you will find the documentation here: [Cline + SAP AI Core](https://architecture.learning.sap.com/docs/ref-arch/e5eb3b9b1d/10)
 
-This Documentation will also work with SAP Build Code. To open the extensions click on the menu icon, select View -> Extensions.
+This Documentation will also work with SAP Build Code. To open the extensions click on the menu icon, select View -> Extensions. Confrim with ok and search for *Cline*. Install the extension.
 </details>
 <details>
 <summary><b>BAS Cline MCP config</b></summary>
