@@ -119,7 +119,7 @@ This Documentation will also work with SAP Build Code. To open the extensions cl
 </details>
 
 ## Exercise 0.3 Add instructions to the AI agents
-To ensure that the AI produces correct results, we propose rules that guide the LLM’s behavior. For example for in the CAP MCP server, we define that the mcp server is always used when it searches for CDS definitions.
+To ensure that the AI produces correct results, we propose rules that guide the LLM’s behavior. For example for in the CAP MCP server, we define that the MCP server is always used when it searches for CDS definitions.
 We are now defining rules to help the LLM use the server correctly. It is a combination of rules for CAP and Fiori Elements and store in an agents.md file in your dev space. 
 
 We already have done that for you. The file is store in location /home/user/agents.md
