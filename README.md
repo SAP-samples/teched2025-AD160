@@ -26,11 +26,15 @@ In exercise 1 we will connect to the S/4 system and create an application to man
 
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - Create an Incident Management app with agentic AI](exercises/ex1/)
-        1.1 Creating an Incident Management Application with AI Agents in SAP Build Code
-        1.2 Create and explore a CAP Model
-        1.3 Use AI Agents to add UIs to the application
-        1.4 Add attachments to the application 
+- [Exercise 1 - Create an Incident Management app with agentic AI](exercises/ex1/):
+
+       1.1 Creating an Incident Management Application with AI Agents in SAP Build Code
+
+       1.2 Create and explore a CAP Model
+
+       1.3 Use AI Agents to add UIs to the application
+
+       1.4 Add attachments to the application 
   
 Start the exercises [here](exercises/ex0/).
 
