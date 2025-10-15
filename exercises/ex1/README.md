@@ -283,11 +283,18 @@ The new UI should look like this:
 
 ### 1.3.3 Use the S/4 Business Partner
 
+Maybe you have noticed if you create a new incident you can manually enter the Business Partner. But these values should come from the S/4 system. Therefore we want to adapt the UI that it contains a value help instead of a regular text field. We will use the AI Agent for that.
+
+
 ```
 if a new incident is created the businesspartner should be selected from the external S/4 system as value help. Use sample data for that.
 ```
 
+Accept all the changes from the AI Agent.
 
+Go back to the preview and create a new incident. You should see a value help now for the Business Partner.
+
+![Value Help](images/valuehelp.jpg)
 
 This completes the first part of the tutorial.
 
