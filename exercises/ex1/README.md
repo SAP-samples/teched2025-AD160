@@ -170,8 +170,11 @@ Currently that file should only contain simple projections on the entities.
 
 **1.2.4 Add sample data**
 
-Please check if you already have some sample data in your project. You can find these in folder db/data or test/data.
-When you use cds watch or cds deploy, CSV files are loaded by default from test/data. However, when preparing for production deployments using cds build, CSV files from test/data are not loaded.
+Sometimes the AI Agent created also some sample data during the creation of the schema and service.
+
+Please check if you already have some sample data in your project. You can find these in one of the folders db/data or test/data.
+
+*What is the difference between these two folder?* When you use cds watch or cds deploy, CSV files are loaded by default from test/data. However, when preparing for production deployments using cds build, CSV files from test/data are not loaded. Instead the values from db/data will be used as initial data in the database.
 
 
 ![Sample Data](images/sampledata.jpg) 
