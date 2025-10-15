@@ -13,8 +13,11 @@ We are using SAP Build Code, which provides a powerful, cloud-based development 
 4. Select **Full-Stack** as development configuration for your scenario. Press Next.
 5. Select **Full-stack Node.JS** asruntime. Press Next.
 6. Enter a project name, for example **incidentmanagementXXX**, where XXX is the number of your previously assigned user. (The number is added to the project name to make sure your project is different from the ones of other users of this tutorial in case you want to deploy the application to the SAP Business Technology Platform (BTP)).
-7. Don't change the Dev Space and press **Review**.
-8. Click **Create** to finalize the setup and start working on your application
+
+   *hint* If the project name is already be used, as we run the hands-on several times, add another random number afterwards.
+   
+8. Don't change the Dev Space and press **Review**.
+9. Click **Create** to finalize the setup and start working on your application
 
 A new project will be created. This will take a few minutes. When the process is complete, your new application will appear in the SAP Build Lobby under **My Projects**
 
