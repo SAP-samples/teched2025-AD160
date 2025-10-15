@@ -67,7 +67,7 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
 ![LLM](images/llm.jpg) 
 
-3.    Now we have to enter the AI Core client ID and secret.
+3.    Now we have to enter the AI Core client ID and secret. You find this information in the aicore.txt file on your desktop.
 
 ![AICore](images/AICore.jpg) 
 
