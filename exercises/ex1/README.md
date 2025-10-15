@@ -5,7 +5,7 @@
 We are using SAP Build Code, which provides a powerful, cloud-based development environment optimized specifically for the SAP ecosystem, which accelerates the creation of business applications and extensions. As a central entry point for the SAP Build portfolio we start in the SAP Build Lobby.
 
 1.    Go to the SAP Build Lobby https://lcapteched.eu10.build.cloud.sap/lobby  to create a new application.
-2.    Click the Create button to begin -> By clicking on *Create* you can choose between ,,Create’’ ,,Clone from Git’’ and ,,Add from Dev Space’’ -> Choose *Create*
+2.    Click the Create button to begin -> By clicking on *Create* you can choose between ,,Create’’ ,,Clone from Git’’ and ,,Add from Dev Space’’ -> Choose **Create**
 
 ![Lobby](images/lobby.png)
 
