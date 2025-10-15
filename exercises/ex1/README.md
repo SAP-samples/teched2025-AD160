@@ -124,8 +124,10 @@ You can now modify or accept the proposal and the agent will generate the necess
 
 A CAP service always consists of one or many entities that are the data model. Once the application is tested or deployed these entities result in database tables. On top of these, you have one to many services, that itself consist of service entities.
 
-Your schema should contain now entities for incidents, customers and messages. Let's have a closer look what was implemented by the AI agent.
-In the db folder, you will find the **schema.cds** file. This file contains the data model.
+Your schema should contain now entities for incidents and messages. Let's have a closer look what was implemented by the AI agent.
+
+1. In the db folder, you will find the **schema.cds** file. This file contains the data model.
+
 In the beginning it includes some aspects from the common library. For example cuid and managed can be added.
 
 ![Common](images/common.jpg) 
@@ -133,14 +135,17 @@ In the beginning it includes some aspects from the common library. For example c
    **cuid** is a shortcut for unique primary keys
 
    **managed** captues created by/at and latest modified by/at management information for records
+
 Find more information here: https://cap.cloud.sap/docs/cds/common#aspect-cuid
 
 
-Urgeny and Status will be modeled as Enum types. If you want to find more about the, have  look at the capire documentation: https://cap.cloud.sap/docs/cds/cdl#enums
+Urgeny and Status will be modeled as Enum types. These are semicolon-delimited list of symbols. If our use case would require localization of values, we would have to model them as [code list](https://cap.cloud.sap/docs/cds/common#adding-own-code-lists)
+
+If you want to find more about the, have  look at the capire documentation: https://cap.cloud.sap/docs/cds/cdl#enums
 
 
 
-What you will also see in your schema that relationships between entities are created. There are two ways. Associations and Compositions.
+2. What you will also see in your schema that relationships between entities are created. There are two ways. Associations and Compositions.
 
 ![association](images/association.jpg) 
 
