@@ -69,15 +69,19 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
 3.    Now we have to enter the AI Core client ID and secret. You find this information in the aicore.txt file on your desktop.
 
-![AICore](images/AICore.jpg) 
+![AICore](images/AICore.jpg)
 
-4.    Now we can go back, by clicking on the LLM name at the button again.
+4.    Please check if **Orchestration Mode** is checked and **athropic claude4 sonnet** is selected as model.
+
+![Orchestration](images/orchestration.jpg)
+
+5.    Now we can go back, by clicking on the LLM name at the button again.
 
 ![Cline back](images/llmback.jpg) 
 
-5.    We want to start to create the incident management application. In the first step only the data model, service should be created. As we are building a SAP Fiori Elements UI at the end on top of the backend, we want to have the service draft enabled.
+6.    We want to start to create the incident management application. In the first step only the data model, service should be created. As we are building a SAP Fiori Elements UI at the end on top of the backend, we want to have the service draft enabled.
 
-6.    Copy and paste the following prompt in the input field and execute the prompt in **Plan** mode.
+7.    Copy and paste the following prompt in the input field and execute the prompt in **Plan** mode.
 
 
 ```
@@ -109,15 +113,15 @@ Now you should get an proposed Data Model Architecture, which could look like th
 
 
 
-7. As a next step an implementation Plan should be displayed.
+8. As a next step an implementation Plan should be displayed.
 - __Create Data Model__ (db/schema.cds)
 - __Create Service Definition__ (srv/incidents-service.cds)
 
 You can now modify or accept the proposal and the agent will generate the necessary files.
 
-8. We don't need any further modification, therefore switch to act plan and accept the proposal.
+9. We don't need any further modification, therefore switch to act plan and accept the proposal.
 
-9. If you navigate now to your file explorer by clicking the **explorer** icon on the right side, your file structure should contain these files:
+10. If you navigate now to your file explorer by clicking the **explorer** icon on the right side, your file structure should contain these files:
 
 ![Files](images/files.jpg) 
 
