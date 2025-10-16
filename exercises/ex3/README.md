@@ -174,6 +174,20 @@ for Cline
 }
 
 
+1.    Open a new terminal by pressing the hamburger icon on the left side pane
+2.    Select *Terminal*
+3.    Select *New terminal*
+
+![Terminal](images/terminal.png)
+
+4. enter **cds watch** and press enter to start a preview of the service:
+```
+cds watch
+```
+
+2. Click on **http://localhost:4004** in the terminal to open the preview
+
+
 ## Summary
 
 You've now ...

@@ -3,9 +3,9 @@
 ## Exercise 2.1 Use the attachments plugin
 
 
-In this opional part of the tutorial, another feature of the CAP framework will be added to the application: With each incident, the user should have an option to add an attachment, for example, a photo the problem description. For this, addition logic and an additional UI section is needed to maintain and show attachments for each notification. 
+In this optional part of the tutorial, another feature of the CAP framework will be added to the application: With each incident, the user should have an option to add an attachment, for example, a photo the problem description. For this, additional logic and an additional UI section is needed to maintain and show attachments for each notification. 
 
-SAP Build Code via CAP and SAP Fiori elements make it easy to add this functionality:
+SAP Build Code via CAP and SAP Fiori elements makes it easy to add this functionality:
 
 1.    Open a new terminal by pressing the hamburger icon on the left side pane
 2.    Select *Terminal*

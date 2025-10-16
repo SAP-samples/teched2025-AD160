@@ -41,16 +41,16 @@ SAP is committed to meeting developers where they’re at – that means no matt
 
 SAP is introducing Model Context Protocol (MCP) servers to boost development with the following technologies:
 
-- Cloud Application Programming Model (CAP)
+- SAP Cloud Application Programming Model (CAP)
 - SAP Fiori Elements 
 - SAPUI5 
 
 By adopting these new MCP standards, developers can seamlessly extend SAP’s development capabilities into multiple environments, ensuring flexibility and choice. SAP Build now enhances popular IDEs and AI coding assistants such as Cursor, Windsurf, Github Copilot, Cline and Claude Code.
 
-The MCP Servers are being released as an open-source projects, licensed under the Apache-2.0 license. This marks another step in our commitment to openness and community-driven innovation.
+The SAP MCP Servers are being released as open-source projects, licensed under the Apache-2.0 license. This marks another step in our commitment to openness and community-driven innovation.
 
 Value of SAP MCP Tools:
-- Best Practices Built-In: Generated code with CAP, UI5 and Fiori elements code already provides you with the right starting point for reaching SAP standards and proven design guidelines.
+- Best Practices Built-In: Generated code with SAP CAP, SAPUI5 and  SAP Fiori Elements code already provides you with the right starting point for reaching SAP standards and proven design guidelines.
 - Guided Development: Developers receive recommendations and guardrails tailored to SAP Business Technology Platform (BTP).
 - Consistency:  SAP’s MCP tools are and will be reused across our tooling portfolio, ensuring consistent developer experience and outcomes wherever you build SAP applications. Whether you’re generating backend services, UIs, or business logic, you can rely on the same quality, structure, and compliance.
 
@@ -66,9 +66,9 @@ To save some time in this hands-on, we already set up Cline with an SAP AI Core 
 
 <details>
 <summary><b>Manual installation of Cline</b></summary>
-If you want to set it up after this hands-on on your maschine, you will find the documentation here: [Cline + SAP AI Core](https://architecture.learning.sap.com/docs/ref-arch/e5eb3b9b1d/10)
+If you want to set it up after this hands-on on your machine, you will find the documentation here: [Cline + SAP AI Core](https://architecture.learning.sap.com/docs/ref-arch/e5eb3b9b1d/10)
 
-This Documentation will also work with SAP Build Code. To open the extensions click on the menu icon, select View -> Extensions. Confrim with ok and search for *Cline*. Install the extension.
+This documentation will also work with SAP Build Code. To open the extensions click on the menu icon, select View -> Extensions. Confirm with ok and search for *Cline*. Install the extension.
 </details>
 <details>
 <summary><b>BAS Cline MCP config</b></summary>
@@ -119,7 +119,7 @@ This Documentation will also work with SAP Build Code. To open the extensions cl
 </details>
 
 ## Exercise 0.3 Add instructions to the AI agents
-To ensure that the AI produces correct results, we propose rules that guide the LLM’s behavior. For example for in the CAP MCP server, we define that the MCP server is always used when it searches for CDS definitions.
+To ensure that the AI produces correct results, we propose rules that guide the LLM’s behavior. For example in the CAP MCP server, we define that the MCP server is always used when it searches for CDS definitions.
 We are now defining rules to help the LLM use the server correctly. It is a combination of rules for CAP and Fiori Elements and store in an agents.md file in your dev space. 
 
 We already have done that for you. The file is store in location /home/user/agents.md

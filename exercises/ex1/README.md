@@ -2,7 +2,7 @@
 
 ### 1.1 Creating an Incident Management Application with AI Agents in SAP Build Code
 
-We are using SAP Build Code, which provides a powerful, cloud-based development environment optimized specifically for the SAP ecosystem, which accelerates the creation of business applications and extensions. As a central entry point for the SAP Build portfolio we start in the SAP Build Lobby.
+We are using SAP Build Code, which provides a powerful, cloud-based development environment optimized specifically for the SAP ecosystem. SAP Build Code accelerates the creation of business applications and extensions. As a central entry point for the SAP Build portfolio we start in the SAP Build Lobby.
 
 1.    Go to the SAP Build Lobby https://lcapteched.eu10.build.cloud.sap/lobby  to create a new application.
 2.    Click the Create button to begin -> By clicking on *Create* you can choose between ,,Create’’ ,,Clone from Git’’ and ,,Add from Dev Space’’ -> Choose **Create**
@@ -11,7 +11,7 @@ We are using SAP Build Code, which provides a powerful, cloud-based development 
 
 3. Next, choose **Application** from the available options 
 4. Select **Full-Stack** as development configuration for your scenario. Press Next.
-5. Select **Full-stack Node.JS** asruntime. Press Next.
+5. Select **Full-stack Node.JS** as runtime. Press Next.
 6. Enter a project name, for example **incidentmanagementXXX**, where XXX is the number of your previously assigned user. (The number is added to the project name to make sure your project is different from the ones of other users of this tutorial in case you want to deploy the application to the SAP Business Technology Platform (BTP)).
 
    *hint* If the project name is already be used, as we run the hands-on several times, add another random number afterwards.
@@ -40,7 +40,7 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
       Another option is SAP Business Accelerator Hub, which shows all the publicly available APIs from all SAP products, that you can also find directly in the SAP Business Accelerator Hub (https://api.sap.com/)
 
-      A third option is the Developer Hub, see here, where administrators can carefully curate and govern which APIs are published to developers and to manage these APIs by securing, applying transformation or traffic management options. The last option is the Unfied Customer Landscape, which shows all the APIs that are part of a customer’s SAP and Third Party landscape.
+      A third option is the Developer Hub, where administrators can carefully curate and govern which APIs are published to developers and to manage these APIs by securing, applying transformation or traffic management options. The last option is the Unfied Customer Landscape, which shows all the APIs that are part of a customer’s SAP and Third Party landscape.
       Take some time to explore these other options separately.
 
       Turn to the preselected **SAP System** choice. Select the service API_BUSINESS_PARTNER.
@@ -63,7 +63,7 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
 ![Cline](images/openCline.jpg) 
 
-2.    We need to add the AI Core credentials.Therefore click on the llm at the bottom of Cline.
+2.    We need to add the AI Core credentials.Therefore click on the LLM at the bottom of Cline.
 
 ![LLM](images/llm.jpg) 
 
@@ -76,7 +76,8 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 ![Cline back](images/llmback.jpg) 
 
 5.    We want to start to create the incident management application. In the first step only the data model, service should be created. As we are building a SAP Fiori Elements UI at the end on top of the backend, we want to have the service draft enabled.
-6.Copy and paste the following prompt in the input field: 
+
+6.    Copy and paste the following prompt in the input field and execute the prompt in **Plan** mode.
 
 
 ```
@@ -108,15 +109,15 @@ Now you should get an proposed Data Model Architecture, which could look like th
 
 
 
-6. As a next step an implementation Plan should be displayed.
+7. As a next step an implementation Plan should be displayed.
 - __Create Data Model__ (db/schema.cds)
 - __Create Service Definition__ (srv/incidents-service.cds)
 
 You can now modify or accept the proposal and the agent will generate the necessary files.
 
-7. We don't need any further modification, therefore switch to act plan and accept the proposal.
+8. We don't need any further modification, therefore switch to act plan and accept the proposal.
 
-8. If you navigate now to your file explorer by clicking the **explorer** icon on the right side, your file structure should contain these files:
+9. If you navigate now to your file explorer by clicking the **explorer** icon on the right side, your file structure should contain these files:
 
 ![Files](images/files.jpg) 
 
@@ -142,7 +143,7 @@ Find more information here: https://cap.cloud.sap/docs/cds/common#aspect-cuid
 
 Urgeny and Status will be modeled as Enum types. These are semicolon-delimited list of symbols. If our use case would require localization of values, we would have to model them as [code list](https://cap.cloud.sap/docs/cds/common#adding-own-code-lists)
 
-If you want to find more about the, have  look at the capire documentation: https://cap.cloud.sap/docs/cds/cdl#enums
+If you want to find more about the Enum type, have look at the capire documentation: https://cap.cloud.sap/docs/cds/cdl#enums
 
 
 
@@ -171,7 +172,7 @@ Currently that file should only contain simple projections on the entities.
 
 **1.2.4 Add sample data**
 
-Sometimes the AI Agent created also some sample data during the creation of the schema and service.
+Insome cases it could be that the AI Agent also creates sample data during the creation of the schema and service.
 
 Please check if you already have some sample data in your project. You can find these in one of the folders db/data or test/data.
 
@@ -191,13 +192,14 @@ Accept the proposal and file generation from the AI Agent. Afterwards verify tha
 
 **1.2.5 Add some logic to the service with the AI Agent**
 
-We want to extend the application with some backend logic. If the title of an incidents contains th word urgent, the backend should automatically update the urgency field to high. In addition if an incident is already closed, it cannot be modified anymore.
+We want to extend the application with some backend logic. If the title of an incidents contains the word urgent, the backend should automatically update the urgency field to high. In addition if an incident is already closed, it cannot be modified anymore.
 
 We will use the AI agent again for that again.
 
 Please execute the following prompt:
 
 ```
+Create a new file called incidents-service.js.
 If an incident is closed, it cannot be modify anymore.
 If the title of an incidents includes urgent, set the urgency to high.
 Don't run a preview after generation of the logic.
@@ -212,18 +214,11 @@ As you can see the AI agents included the logic we have requested and also two c
 **1.2.6 Preview the application**
 
 Let's have a look how the application is looking like at the moment.
-1.    Open a new terminal by pressing the hamburger icon on the left side pane
-2.    Select *Terminal*
-3.    Select *New terminal*
+1. Press the green arrow on the upper right of the Storyboard.
 
-![Terminal](images/terminal.png)
+![Run Preview](images/run.jpg)
 
-4. enter **cds watch** and press enter to start a preview of the service:
-```
-cds watch
-```
-
-2. Click on **http://localhost:4004** in the terminal to open the preview
+2. Select **run incidents** 
 
 3. Now select **Fiori Preview** for the incidents.
 
@@ -239,7 +234,9 @@ cds watch
 
 6. Go back to the development environment.
 
+7. You can stop the preview by clicking the red square at the top middle section 
 
+![Stop preview](images/stoppreview.jpg)
 
 ### 1.3 Use AI Agents to add UIs to the application
 
