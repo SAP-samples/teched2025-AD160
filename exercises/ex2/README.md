@@ -42,7 +42,7 @@ Let’s have a look at the result:
 
 8. If you have stopped the preview, press the green arrow on the upper right of the Storyboard again. If the preview is still running, the application should have refreshed itself.
 
-9.    On the *Application Development Project Preview* page, press the tile *Notifications* again.
+9.    On the *Application Development Project Preview* page, press the tile *Incidents* again.
 
 10. Create a new notification in your app by clicking *create* which you can find at the top right. You should now see a new attachment section in the application.
 
