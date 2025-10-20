@@ -44,6 +44,7 @@ SAP is introducing Model Context Protocol (MCP) servers to boost development wit
 - SAP Cloud Application Programming Model (CAP)
 - SAP Fiori Elements 
 - SAPUI5 
+- Mobile Development Kit (MDK): Not covered in this tutorial
 
 By adopting these new MCP standards, developers can seamlessly extend SAP’s development capabilities into multiple environments, ensuring flexibility and choice. SAP Build now enhances popular IDEs and AI coding assistants such as Cursor, Windsurf, Github Copilot, Cline and Claude Code.
 
