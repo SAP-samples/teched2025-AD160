@@ -63,29 +63,29 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
 ![Cline](images/openCline.jpg) 
 
-2.    If you see any notifications, you cna close them to get a better overview.
+2.    Select **Use your own API Key** as we are going to use SAP AI Core to connect to LLMs.
+
+![Own API Key](images/ownapikey.jpg) 
+
+3.    Select **SAP AI Core** as API Provider.
+
+![API Provider](images/apiprovider.jpg) 
+
+4.    If you see any notifications, you cna close them to get a better overview.
 
 ![Notifications](images/notifications.jpg) 
 
-2.    We need to add the AI Core credentials.Therefore click on the LLM at the bottom of Cline.
-
-![LLM](images/llm.jpg) 
-
-3.    Now we have to enter the AI Core client ID and secret. You find this information in the aicore.txt file on your desktop.
-
-![AICore](images/AICore.jpg)
-
-4.    Please check if **Orchestration Mode** is checked and **athropic claude4 sonnet** is selected as model.
+5.    Please check if **Orchestration Mode** is checked and **athropic claude4 sonnet** is selected as model.
 
 ![Orchestration](images/orchestration.jpg)
 
-5.    Now we can go back, by clicking on the LLM name at the button again.
+6.    Now we can go back, by clicking on the LLM name at the button again.
 
 ![Cline back](images/llmback.jpg) 
 
-6.    We want to start to create the incident management application. In the first step only the data model, service should be created. As we are building a SAP Fiori Elements UI at the end on top of the backend, we want to have the service draft enabled.
+7.    We want to start to create the incident management application. In the first step only the data model, service should be created. As we are building a SAP Fiori Elements UI at the end on top of the backend, we want to have the service draft enabled.
 
-7.    Copy and paste the following prompt in the input field and execute the prompt in **Plan** mode.
+8.    Copy and paste the following prompt in the input field and execute the prompt in **Plan** mode.
 
 
 ```
