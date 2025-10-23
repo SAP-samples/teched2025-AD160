@@ -6,7 +6,7 @@ This repository contains the material for the SAP TechEd 2025 session called AD1
 
 ## Overview
 
-This session introduces attendees to AI Driven development. You will create a new lightweight incident management application on the SAP BTP using SAP Build Code with the new agnetic coding capabilities provided by SAP's MCP servers. The application will be based on the SAP Cloud Application Programming Model (CAP) in the backend and have an SAP Fiori Elements UI as frontend. The application will also have a connectivity from the SAP BTP to an SAP S/4HANA system. 
+This session introduces attendees to AI Driven development. You will create a new lightweight incident management application on the SAP BTP using SAP Build Code with the new agnetic coding capabilities provided by SAP's Model Context Protocol (MCP) servers. The application will be based on the SAP Cloud Application Programming Model (CAP) in the backend and have an SAP Fiori Elements UI as frontend. The application will also have a connectivity from the SAP BTP to an SAP S/4HANA system. 
 
 ![Solution Diagram](images/solution.jpg) 
 
@@ -21,7 +21,7 @@ In a browser, preferably Google Chrome open the SAP Build Lobby https://lcaptech
 
 ## Exercises
 
-The exercise is divided in two parts. In the Getting Started section we will introduce you into the AI concepts we are using and are going to set these up. 
+The exercise is divided in two parts. In the Getting Started section we will introduce you to the AI concepts we are using and are going to set these up. 
 In exercise 1 we will connect to the S/4 system and create an application to manage incidents. 
 
 

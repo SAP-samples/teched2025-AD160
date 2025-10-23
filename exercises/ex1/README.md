@@ -280,7 +280,7 @@ We want to adjust the overview page a bit, that we can easier identity urgent in
 
 
 ```
-We need identify urgent incidents better in the overview page. Therefore do the following change:
+We need to identify urgent incidents better in the overview page. Therefore do the following change:
 Incidents with urgency "high" should be highlighted with criticality 1 - Negative (red). "Medium" incidents with 2 - Critical (orange) and "low" incidents with 3 - Positive (green)
 ```
 
