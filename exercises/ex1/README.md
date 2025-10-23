@@ -83,9 +83,13 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
 ![Cline back](images/llmback.jpg) 
 
-7.    We want to start to create the incident management application. In the first step only the data model, service should be created. As we are building a SAP Fiori Elements UI at the end on top of the backend, we want to have the service draft enabled.
+7.    Activate **Plan** mode, by clicking on it.
 
-8.    Copy and paste the following prompt in the input field and execute the prompt in **Plan** mode.
+![Plan Mode](images/planmode.jpg) 
+
+8.    We want to start to create the incident management application. In the first step only the data model, service should be created. As we are building a SAP Fiori Elements UI at the end on top of the backend, we want to have the service draft enabled.
+
+9.    Copy and paste the following prompt in the input field and execute the prompt in **Plan** mode.
 
 
 ```
