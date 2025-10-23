@@ -129,6 +129,8 @@ You can now modify or accept the proposal and the agent will generate the necess
 
 9. We don't need any further modification, therefore switch to act plan and accept the proposal.
 
+![Act Mode](images/actmode.jpg) 
+
 10. If you navigate now to your file explorer by clicking the **explorer** icon on the right side, your file structure should contain these files:
 
 ![Files](images/files.jpg) 
