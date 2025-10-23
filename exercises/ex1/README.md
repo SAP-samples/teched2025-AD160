@@ -131,7 +131,11 @@ You can now modify or accept the proposal and the agent will generate the necess
 
 ![Act Mode](images/actmode.jpg) 
 
-10. If you navigate now to your file explorer by clicking the **explorer** icon on the right side, your file structure should contain these files:
+10. Accept all the saves.
+
+![Save Changes](images/savechanges.jpg) 
+
+11. If you navigate now to your file explorer by clicking the **explorer** icon on the right side, your file structure should contain these files:
 
 ![Files](images/files.jpg) 
 
