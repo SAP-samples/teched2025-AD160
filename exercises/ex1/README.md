@@ -63,6 +63,10 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
 ![Cline](images/openCline.jpg) 
 
+2.    If you see any notifications, you cna close them to get a better overview.
+
+![Notifications](images/notifications.jpg) 
+
 2.    We need to add the AI Core credentials.Therefore click on the LLM at the bottom of Cline.
 
 ![LLM](images/llm.jpg) 
