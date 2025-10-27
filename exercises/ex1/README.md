@@ -264,7 +264,7 @@ Now let's add some SAP Fiori Elements UI on top. Therefore we will use our AI ag
 Please execute the following prompt:
 
 ```
-Create a Fiori elements list report on top for the incidents. Add the incidentsmessages to the details of the incidents.
+Create a SAP Fiori elements List Report Page on top for the incidents. Add the incidentsmessages to the details of the incidents. Display and application name should be incidents. Description "my Incidents". Datasource is the IncidentsService.
 ```
 
 You can execute the command directly in act mode.
