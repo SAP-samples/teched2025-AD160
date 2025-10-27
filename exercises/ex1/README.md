@@ -43,9 +43,9 @@ In our application we want to use the Business Partner data from our S4/HANA sys
       A third option is the Developer Hub, where administrators can carefully curate and govern which APIs are published to developers and to manage these APIs by securing, applying transformation or traffic management options. The last option is the Unfied Customer Landscape, which shows all the APIs that are part of a customer’s SAP and Third Party landscape.
       Take some time to explore these other options separately.
 
-      Turn to the preselected **SAP System** choice. Select the service API_BUSINESS_PARTNER.
+      Turn to the preselected **SAP System** choice. Select the service API_BUSINESS_PARTNER_CC7.
 
-![Business Partner API](images/businesspartnerAPI.jpg) 
+![Business Partner API](images/businesspartnerAPI.png) 
 
 3.    Explore its entities and respective details on the right. You can also press on the Live Data tab on the details view. As the SAP System APIs are connected to real backed systems, you can see some of the API’s data from this system. You can click on **Live Data** to check the data. Afterwards you can just click on **Add to Project**.
 
@@ -238,7 +238,7 @@ Let's have a look how the application is looking like at the moment.
 
 2. Select **run incidents** 
 
-3. Now select **Fiori Preview** for the incidents.
+3. Now select the **table icon** for the incidents entity.
 
 ![Incidents preview](images/preview.jpg)
 
