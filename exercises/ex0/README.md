@@ -81,40 +81,24 @@ This documentation will also work with SAP Build Code. To open the extensions cl
       "disabled": false,
       "timeout": 60,
       "type": "stdio",
-      "command": "node",
-      "args": [
-        "/home/user/.node_modules_global/lib/node_modules/@cap-js/mcp-server/index.js"
-      ],
-      "env": {
-        "PATH": "/home/user/.asdf/bin:"
-      }
+      "command": "npx",
+      "args": ["-y", "@cap-js/mcp-server@latest"]
     },
     "fiori-mcp": {
-      "disabled": false,
-      "timeout": 60,
       "type": "stdio",
-      "command": "node",
-      "args": [
-        "/home/user/.node_modules_global/lib/node_modules/@sap-ux/fiori-mcp-server/dist/index.js"
-      ],
-      "env": {
-        "PATH": "/home/user/.asdf/bin:"
-      }
+      "timeout": 60,
+      "command": "npx",
+      "args": ["--yes", "@sap-ux/fiori-mcp-server@latest", "fiori-mcp"]
     },
     "ui5-mcp": {
       "disabled": false,
       "timeout": 60,
       "type": "stdio",
-      "command": "node",
-      "args": [
-        "/home/user/.node_modules_global/lib/node_modules/@ui5/mcp-server/bin/ui5mcp.js"
-      ],
-      "env": {
-        "PATH": "/home/user/.asdf/bin:"
-      }
+      "command": "npx",
+      "args": ["--yes", "@ui5/mcp-server@latest"]
     }
   }
-}
+} 
 ```
 
 </details>
