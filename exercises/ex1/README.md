@@ -258,7 +258,7 @@ Let's have a look how the application is looking like at the moment.
 
 ### 1.3 Use AI Agents to add UIs to the application
 
-### 1.3.1 Create a SAP Fiori Elemts UI
+### 1.3.1 Create a SAP Fiori Elements UI
 
 Now let's add some SAP Fiori Elements UI on top. Therefore we will use our AI agents again. This time the SAP Fiori MCP server will be used by the agent.
 Please execute the following prompt:
