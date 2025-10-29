@@ -71,9 +71,10 @@ Use the `get_guidelines` tool of the UI5 MCP server to retrieve the latest codin
 </details>
 <details>
 <summary><b>Spoiler for an example prompt</b></summary>
-```
-Create a freestyle SAP ui5 application on top for the incidents for analytical purposes. Create a pie chart that visualises the sum of incidents per status.
-```
+
+  ```
+  Create a freestyle SAP ui5 application on top for the incidents for analytical purposes. Create a pie chart that visualises the sum of incidents per status.
+  ```
 
 </details>
 
