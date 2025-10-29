@@ -199,7 +199,7 @@ Please check if you already have some sample data in your project. You can find 
 That means if you don't have a folder **test/data** with sample data, go back to Cline and let's generate some sample data.
 
 ```
-Add some meaningful sample data to the application for incidents and conversation logs. If you already have sample data in db/data move them to test/data. Don't run a preview.
+Add some meaningful sample data to the application for incidents and conversation logs. If you already have sample data in db/data move them to test/data. Don't run a preview.use the mcp server cds-mcp.
 ```
 
 Accept the proposal and file generation from the AI Agent. Afterwards verify that you have csv files in the test/data folder.
