@@ -1,4 +1,4 @@
-# Exercise 2 - Optional Part: Add attachments to the application 
+# Exercise 2 - Optional Parts: Adding further capabilities to the application
 
 ## Exercise 2.1 Use the attachments plugin
 
@@ -50,7 +50,32 @@ Let’s have a look at the result:
 
 New attachments can now be uploaded that will then appear in the list. You can also view them from that list. Each time creating a new incidents with a description, the attachments will be stored alongside the incdents.
 
-This concludes the creation of an incidents application with GenAI in SAP Build Code. 
+
+
+## Exercise 2.2 Freestyle SAPUI5 Application
+
+In addition to the SAP Fiori Elements to maintain the incidents, we would like to get some analytics on top of our incidents data. For example a freesytle SAPUI5 page that contains a chart that visualises the status of the incidents.
+
+Of course you don't need to implement that manually. Try to ask Cline to perform that task for you.
+
+But before extend the AI agents rules in Cline, with rules for UI5. Copy&paste the following rules into the Clines Global rules file called sap.md.
+
+Maybe you remember that part from the first part of the exercise, what we have prepared already for you for CAP and Fiori Elements. 
+
+```
+## Guidelines for UI5
+
+Use the `get_guidelines` tool of the UI5 MCP server to retrieve the latest coding standards and best practices for UI5 development.
+```
+
+</details>
+<details>
+<summary><b>Spoiler for an example prompt</b></summary>
+```
+Create a freestyle SAP ui5 application on top for the incidents for analytical purposes. Create a pie chart that visualises the sum of incidents per status.
+```
+
+</details>
 
 ## Summary
 

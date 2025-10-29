@@ -71,32 +71,28 @@ In our application we want to use the Business Partner data from our S4/HANA sys
 
 ![API Provider](images/apiprovider.jpg) 
 
-4.    If you see any notifications, you cna close them to get a better overview.
-
-![Notifications](images/notifications.jpg) 
-
-5.    Please check if **Orchestration Mode** is checked and **athropic claude4 sonnet** is selected as model.
+4. Please check if **Orchestration Mode** is checked and **athropic claude4 sonnet** is selected as model.
 
 ![Orchestration](images/orchestration.jpg)
 
-6.    Now we can go back, by clicking on the LLM name at the button again.
+5.    Continue by pressing **Let's go**. If you see any notifications, you can close them to get a better overview.
 
-![Cline back](images/llmback.jpg) 
+![Notifications](images/notifications.jpg) 
 
-7.    Activate **Plan** mode, by clicking on it.
+6.    Activate **Plan** mode, by clicking on it.
 
 ![Plan Mode](images/planmode.jpg) 
 
-8.    We want to start to create the incident management application. In the first step only the data model, service should be created. As we are building a SAP Fiori Elements UI at the end on top of the backend, we want to have the service draft enabled.
+7.    We want to start to create the incident management application. In the first step only the data model, service should be created. As we are building a SAP Fiori Elements UI at the end on top of the backend, we want to have the service draft enabled.
 
-9.    Copy and paste the following prompt in the input field and execute the prompt in **Plan** mode.
+8.    Copy and paste the following prompt in the input field and execute the prompt in **Plan** mode.
 
 
 ```
 update the CAP application for managing customer support incidents. use the mcp server cds-mcp. Create only the data model(schema.cds) and service. The incident service should be draft enabled.
 
 •               Incidents are directly related to BusinessPartners and contain details like title, urgency, status, and a conversation log (messages with timestamps and authors).              
-•               Extend API_BUSINESS_PARTNER. Expose only BusinessPartner with READ.
+•               Extend API_BUSINESS_PARTNER_CC7. Expose only BusinessPartner with READ.
 •               Status and Urgency are enum types, enumerating possible incident states (new, assigned, etc.) and urgency levels (high, medium, low).
 
 ```
